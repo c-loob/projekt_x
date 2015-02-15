@@ -1,0 +1,77 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1455" measuredH="732" mockupW="1112" mockupH="712">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="343" y="20" w="1112" h="712" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//projektx.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="358" y="108" w="1082" h="110" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Button" x="629" y="146" w="106" h="34" measuredW="96" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>kandidaadid%26bm%3Bkandidaadid.bmml%26bm%3Bkandidaadid.bmml%26bm%3Bkandidaadid.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22286%2C126%2C392%2C160%22%20href%3D%22kandidaadid.bmml%22%20alt%3D%22kandidaadid%22%20id%3D%224%22/%3E</map>
+        <text>Kandidaadid</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::IconLabel" x="413" y="132" w="128" h="-1" measuredW="67" measuredH="63" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>loginpealeht%26bm%3Bloginpealeht.bmml%26bm%3Bloginpealeht.bmml%26bm%3Bloginpealeht.bmml</href>
+        <icon>EmoticonIcon%7Clarge</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2270%2C112%2C198%2C175%22%20href%3D%22loginpealeht.bmml%22%20alt%3D%22loginpealeht%22%20id%3D%226%22/%3E</map>
+        <text>e-valimised</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::VRule" x="585" y="108" w="-1" h="110" measuredW="10" measuredH="100" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Button" x="785" y="146" w="106" h="34" measuredW="86" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>tulemused%26bm%3Btulemused.bmml%26bm%3Btulemused.bmml%26bm%3Btulemused.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22442%2C126%2C548%2C160%22%20href%3D%22tulemused.bmml%22%20alt%3D%22tulemused%22%20id%3D%2210%22/%3E</map>
+        <text>Tulemused</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="942" y="146" w="106" h="34" measuredW="79" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>statistika%26bm%3Bstatistika.bmml%26bm%3Bstatistika.bmml%26bm%3Bstatistika.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22599%2C126%2C705%2C160%22%20href%3D%22statistika.bmml%22%20alt%3D%22statistika%22%20id%3D%2211%22/%3E</map>
+        <text>Statistika</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Canvas" x="358" y="230" w="1082" h="462" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::SubTitle" x="850" y="263" w="-1" h="-1" measuredW="329" measuredH="27" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tere%20tulemast%20valimiste%20lehele%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::Button" x="390" y="305" w="174" h="85" measuredW="92" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>h%E4%E4letama%26bm%3Bh%E4%E4letama.bmml%26bm%3Bh%E4%E4letama.bmml%26bm%3Bh%E4%E4letama.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2247%2C285%2C221%2C370%22%20href%3D%22h%25C3%25A4%25C3%25A4letama.bmml%22%20alt%3D%22h%E4%E4letama%22%20id%3D%2216%22/%3E</map>
+        <size>14</size>
+        <text>H%E4%E4letama</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Button" x="390" y="419" w="174" h="85" measuredW="166" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>lisakandidaadiks%26bm%3Blisakandidaadiks.bmml%26bm%3Blisakandidaadiks.bmml%26bm%3Blisakandidaadiks.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2247%2C399%2C221%2C484%22%20href%3D%22lisakandidaadiks.bmml%22%20alt%3D%22lisakandidaadiks%22%20id%3D%2218%22/%3E</map>
+        <menuIcon>false</menuIcon>
+        <size>14</size>
+        <text>Lisa%20end%20kandidaadiks</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::VRule" x="585" y="230" w="-1" h="462" measuredW="10" measuredH="100" zOrder="11" locked="false" isInGroup="-1"/>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::TextArea" x="1144" y="146" w="149" h="34" measuredW="200" measuredH="140" zOrder="12" locked="false" isInGroup="-1"/>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Label" x="1171" y="153" w="108" h="-1" measuredW="89" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tere%2C%20Kalju%20Kits</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Button" x="1308" y="146" w="117" h="34" measuredW="79" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>pealeht%26bm%3Bpealeht.bmml%26bm%3Bpealeht.bmml%26bm%3Bpealeht.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22965%2C126%2C1082%2C160%22%20href%3D%22pealeht.bmml%22%20alt%3D%22pealeht%22%20id%3D%2229%22/%3E</map>
+        <text>Logi%20v%E4lja</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
