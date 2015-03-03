@@ -1,0 +1,177 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 15px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background-color: #E0E0EB;
+	/* 	background-image:url('images/bg_repeat.png');
+	background-repeat:repeat; */
+}
+
+#mainWrapper {
+	width: 1400px;
+	background-position: 50% 100%;
+	margin: 0 auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: white;
+}
+
+/* header */
+#header {
+	width: 1350px;
+	background-position: 50% 0%;
+	background-color: #A3D1FF;
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+
+.leftside {
+	float: left;
+	padding-left: 25px;
+	padding-top: 55px;
+}
+
+.rightside {
+	padding-right: 25px;
+	padding-top: 55px;
+	float: right;
+}
+
+.logoWrapper {
+	float: left;
+	padding: 25px;
+}
+
+#logo {
+	width: 150px;
+	height: 100px;
+}
+
+/* navigationWrapper */
+#navigationWrapper {
+	
+}
+
+.menuButton {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bolder;
+	width: 125px;
+	margin-left: 30px;
+	color: grey;
+	float: left;
+	padding: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: white;
+	border: 2px solid black;
+}
+
+.menuButton:hover {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bolder;
+	width: 125px;
+	margin-left: 30px;
+	color: white;
+	float: left;
+	padding: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: grey;
+	border: 2px solid black;
+}
+
+/*
+.menuButtonClicked {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bolder;
+	width: 125px;
+	margin-left: 30px;
+	color: black;
+	float: left;
+	padding: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: purple;
+	border: 2px solid black;
+}
+*/
+
+/* contentWrapper */
+#contentWrapper {
+	width: 1350px;
+	background-position: 50% 0%;
+	background-color: #A3D1FF;
+	padding-bottom: 10px;
+	margin-bottom: 10px;	
+	margin-left: 25px;
+}
+
+#mainLeftContent {
+	float: left;
+	width: 300px;
+	margin-left: 25px;
+	margin-top: 25px;
+	padding-right: 25px;
+	border-right: 1px solid white;
+}
+
+#mainRightContent {
+	margin-left: 25px;
+	margin-top: 25px;
+	width: 600px;
+	float: left;
+}
+
+#subContent {
+	width: 90%;
+	float: left;
+	padding: 15px;
+	background-color: white;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* ContentStuff */
+
+/* Tehtud tööd */
+.thumbnail {
+	
+}
+
+
+/* Kontakt */
+table {
+	border-spacing: 5px;
+	alig
+}
+
+td {
+	padding-left: 30px;
+	padding: 5px;
+	hori: top;
+}
+
+/* footer */
+#footer {
+	width: 1350px;
+	background-position: 50% 0%;
+	background-color: #A3D1FF;
+	margin-left: 25px;
+}
+
+#footerInfoWrapper {
+	margin-left: 25px;
+	padding-right: 30px;
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#footerInfoContainer {
+	padding: 10px;
+	width: 205px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 10px;
+}
