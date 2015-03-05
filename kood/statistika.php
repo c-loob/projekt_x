@@ -1,5 +1,5 @@
 <?php
-
+/*
 	 include 'dbcon.php';
     
     // Retrieve data
@@ -29,5 +29,10 @@
     }
     
     echo '</div>';
-   
+*/
+
+	echo '<div id="statistika">';
+	echo 'Kraam statistika.php-st';
+	echo '</div>';
+
 ?>

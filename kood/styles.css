@@ -87,12 +87,12 @@ body {
 	font-weight: bolder;
 	width: 125px;
 	margin-left: 30px;
-	color: black;
+	color: white;
 	float: left;
 	padding: 10px;
 	padding-left: 12px;
 	padding-right: 12px;
-	background-color: purple;
+	background-color: grey;
 	border: 2px solid black;
 }
 
@@ -132,25 +132,6 @@ body {
 	margin-bottom: 5px;
 }
 
-/* ContentStuff */
-
-/* Tehtud tööd */
-.thumbnail {
-	
-}
-
-
-/* Kontakt */
-table {
-	border-spacing: 5px;
-	alig
-}
-
-td {
-	padding-left: 30px;
-	padding: 5px;
-	hori: top;
-}
 
 /* footer */
 #footer {
