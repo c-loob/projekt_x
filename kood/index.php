@@ -7,6 +7,11 @@
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 		type="text/javascript">
 	</script>
+	
+	
+	<script src="scripts.js"></script>
+
+
 </head>
 
 <body>
@@ -20,9 +25,9 @@
 			</div>
 			
 			<div class='leftside' id='navigationWrapper'>
-				<button class="menuButton" id="Kandidaadid">Kandidaadid</button>
-				<button class="menuButton" id="Tulemused">Tulemused</button>
-				<button class="menuButton" id="Statistika">Statistika</button>
+				<button class="menuButton" id="kandidaadid">Kandidaadid</button>
+				<button class="menuButton" id="tulemused">Tulemused</button>
+				<button class="menuButton" id="statistika">Statistika</button>
 			</div>
 			
 			<div class="rightside" id="logInOut"> 				
@@ -46,6 +51,11 @@
 				</div>
 
 				<div id="mainRightContent">
+				
+					<div id="loadContent">
+						
+					</div>					
+				
 					<div id='subContent'>
 						<h2>Registreeri kandidaadiks</h2>
 						<form method="post" action="lisaKandidaadiks.php" enctype="multipart/form-data" >
