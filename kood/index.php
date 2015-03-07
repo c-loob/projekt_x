@@ -14,7 +14,7 @@
       <div id='header'>
 			
          <div class='logoWrapper'>
-            <img id='logo' src="css/images/logoUus.png">
+            <!--<img id='logo' src="css/images/logoUus.png">-->
          </div>
 			
          <div class='leftside' id='navigationWrapper'>
@@ -27,7 +27,7 @@
             <button class="menuButton" id="login">Logi sisse</button>
          </div>			
 			
-         <br clear="all" />
+         <br clear="all">
          
       </div>
 
@@ -36,16 +36,16 @@
       
          <div id='contentWrapper'>
             <div id='mainLeftContent'>
-               <div id='subContent'>
+               <div class='subContent'>
                   <p>Siia tuleb "Hääletama" nupp</p>
                </div>
-               <div id='subContent'>
+               <div class='subContent'>
                   <p>Siia tuleb "Lisa kandidaadiks nupp"</p>
                </div>
             </div>
 
             <div id="mainRightContent">
-					 <div id='subContent'>
+					 <div class='subContent'>
               		 <div id="loadContent">
                   	<h2>Registreeri kandidaadiks</h2>
                   	<form method="post" action="lisaKandidaadiks.php" enctype="multipart/form-data" >
@@ -60,7 +60,7 @@
                	</div>	
                </div>
             </div>
-            <br clear="all" />
+            <br clear="all">
          </div>
          
       </div>
@@ -74,7 +74,7 @@
                   E-mail: inff@inff.ee
                </p>
             </div>
-            <br clear="all" />
+            <br clear="all">
          </div>
          
       </div>
