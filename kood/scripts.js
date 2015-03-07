@@ -25,7 +25,7 @@ $(document).ready(function(){
 	});
 	
 	$('#lisaKandidaadiks').click(function(){
-		$('#loadContent').load('lisakandidaadiks.php #lisakandidaadiks');
+		$('#loadContent').load('lisaKandidaadiks.php #lisakandidaadiks');
    	document.title = "Projektx - Lisa kandidaadiks";
 	});	
 	

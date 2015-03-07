@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
    <Title>Projektx - Valime Parimat</Title>
+   <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
