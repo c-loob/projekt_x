@@ -1,3 +1,15 @@
-CREATE TABLE kandidaadid (id int NOT NULL AUTO_INCREMENT, eesnimi varchar(50), perenimi varchar(50), piirkond varchar(50), erakond varchar(50), haali int, PRIMARY KEY(id));
+CREATE TABLE kandidaadid (id int NOT NULL DEFAULT AUTOINCREMENT, eesnimi 
+varchar(50) NOT NULL, perenimi varchar(50) NOT NULL, piirkond varchar(50) NOT NULL, erakond varchar(50) DEFAULT 'Parteitu', 
+haali int DEFAULT 0, PRIMARY KEY(id));
 
-CREATE TABLE erakonnad (nimi varchar(50));
+CREATE TABLE erakonnad (nimi varchar(50) NOT NULL UNIQUE, PRIMARY 
+KEY(nimi));
+
+CREATE TABLE piirkonnad (piirkond varchar(50) NOT NULL UNIQUE, PRIMARY KEY(piirkond));
+
+ALTER TABLE kandidaadid ADD CONSTRAINT fk_kandidaat_erakond 
+FOREIGN KEY (erakond) REFERENCES erakonnad(nimi) ON DELETE SET 
+DEFAULT ON UPDATE CASCADE;
+
+
+ALTER TABLE kandidaadid ADD CONSTRAINT fk_kandidaat_piirkond FOREIGN KEY (piiskond) REFERENCES piirkonnad(piirkond) ON DELETE RESTRICT ON UPDATE CASCADE;
