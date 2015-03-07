@@ -27,7 +27,7 @@
             <button class="menuButton" id="login">Logi sisse</button>
          </div>			
 			
-         <br clear="all">
+         <br class="cb">
          
       </div>
 
@@ -40,27 +40,20 @@
                   <p>Siia tuleb "Hääletama" nupp</p>
                </div>
                <div class='subContent'>
-                  <p>Siia tuleb "Lisa kandidaadiks nupp"</p>
+                  <button class="menuButton" id="lisaKandidaadiks">Lisa kandidaadiks</button>
                </div>
             </div>
 
             <div id="mainRightContent">
 					 <div class='subContent'>
               		 <div id="loadContent">
-                  	<h2>Registreeri kandidaadiks</h2>
-                  	<form method="post" action="lisaKandidaadiks.php" enctype="multipart/form-data" >
-                     	<table>
-                        	<tr> <td>Eesnimi</td>  <td><input type="text" name="eesnimi" id="eesnimi"/></td>   </tr>
-                        	<tr> <td>Perenimi</td> <td><input type="text" name="perenimi" id="perenimi"/></td> </tr>
-                        	<tr> <td>Piirkond</td> <td><input type="text" name="piirkond" id="piirkond"/></td> </tr>
-                        	<tr> <td>Erakond</td>  <td><input type="text" name="erakond" id="erakond"/></td>   </tr>
-                     	</table>     
-                     	<input class="menuButton" type="submit" name="registreeri" value="Registreeri" /> 					
-                  	</form>
+							<p id="h3"> 
+								Tere tulemast valima!							
+							</p>
                	</div>	
                </div>
             </div>
-            <br clear="all">
+            <br class="cb">
          </div>
          
       </div>
@@ -74,7 +67,7 @@
                   E-mail: inff@inff.ee
                </p>
             </div>
-            <br clear="all">
+            <br class="cb">
          </div>
          
       </div>

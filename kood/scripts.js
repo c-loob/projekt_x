@@ -14,17 +14,21 @@ $(document).ready(function(){
 	});
 
 	$('#tulemused').click(function(){
-    	$('#loadContent').load('tulemused.php #tulemused');
+    	$('#loadContent').load('erakondadehaaltearv.php #erakHaalteArv');
     	document.title = "Projektx - Tulemused";
 	 	//window.history.pushState("", "Tulemused", "/tulemused");
 	});
-
 
 	$('#statistika').click(function(){
 		$('#loadContent').load('statistika.php #statistika');
    	document.title = "Projektx - Statistika";
 	});
-
+	
+	$('#lisaKandidaadiks').click(function(){
+		$('#loadContent').load('lisakandidaadiks.php #lisakandidaadiks');
+   	document.title = "Projektx - Lisa kandidaadiks";
+	});	
+	
 });
 
 
