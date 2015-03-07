@@ -1,0 +1,3 @@
+CREATE TABLE kandidaadid (id int NOT NULL AUTO_INCREMENT, eesnimi varchar(50), perenimi varchar(50), piirkond varchar(50), erakond varchar(50), haali int, PRIMARY KEY(id));
+
+CREATE TABLE erakonnad (nimi varchar(50));
