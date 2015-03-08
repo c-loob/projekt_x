@@ -1,3 +1,21 @@
-CREATE TABLE kandidaadid (id int NOT NULL AUTO_INCREMENT, eesnimi varchar(50), perenimi varchar(50), piirkond varchar(50), erakond varchar(50), haali int, PRIMARY KEY(id));
+CREATE TABLE kandidaadid (id int NOT NULL AUTO_INCREMENT, 
+  eesnimi varchar(50), 
+  perenimi varchar(50), 
+  piirkond varchar(50), 
+  erakond varchar(50), 
+  haali int, 
+  PRIMARY KEY(id));
+  
+UPDATE kandidaadid SET haali=100 WHERE eesnimi='Mihkel';
+UPDATE kandidaadid SET haali=22 WHERE eesnimi='Karl';
+UPDATE kandidaadid SET haali=44 WHERE eesnimi='Meelis';
+UPDATE kandidaadid SET haali=32 WHERE eesnimi='Mart';
+UPDATE kandidaadid SET haali=64 WHERE eesnimi='Siiri';
+
 
 CREATE TABLE erakonnad (nimi varchar(50));
+
+INSERT INTO erakonnad (nimi) VALUES ('Sinised');
+INSERT INTO erakonnad (nimi) VALUES ('Rohelised');
+INSERT INTO erakonnad (nimi) VALUES ('Valged');
+INSERT INTO erakonnad (nimi) VALUES ('Kollased');
