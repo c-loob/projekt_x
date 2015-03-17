@@ -16,7 +16,7 @@ use Facebook\HttpClients\FacebookHttpable;
 // init app with app id and secret
 FacebookSession::setDefaultApplication( '1604288763142467','384c4b2abee1541bf37ba338439de210' );
 // login helper with redirect_uri
-    $helper = new FacebookRedirectLoginHelper('http://projektvol2.cloudpp.net/kood/fbconfig.php' );
+    $helper = new FacebookRedirectLoginHelper('http://projektvol2.cloudpp.net/test/fbconfig.php' );
 try {
   $session = $helper->getSessionFromRedirect();
 } catch( FacebookRequestException $ex ) {
