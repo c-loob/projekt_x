@@ -164,3 +164,12 @@ br.cb {
 	margin-right: 10px;
 	margin-top: 10px;
 }
+
+td, th {
+	background-color: #E4F1FF;
+    border-bottom: 1px solid #A3D1FF;
+    border-right: 1px solid #A3D1FF;
+    padding: 5px;
+}
+
+
