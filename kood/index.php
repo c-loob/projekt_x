@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" 
 "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html>
 <head>
    <title>Projektx - Valime Parimat</title>
@@ -15,7 +16,7 @@
    <div id='mainWrapper'>
 	
       <div id='header'>
-			<fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();window.location.reload();"></fb:login-button>
+			<fb:login-button autologoutlink='true' scope='public_profile,email' onlogin='checkLoginState();window.location.reload();'></fb:login-button>
 					
          <div class='logoWrapper'>
             <!--<img id='logo' src="css/images/logoUus.png">-->
@@ -56,7 +57,7 @@
                	</div>	
                </div>
             </div>
-            <br class="cb">
+            <br class="cb"></br>
          </div>
          
       </div>

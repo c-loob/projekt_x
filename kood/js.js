@@ -1,6 +1,6 @@
 function appPropagation() {
     //"use strict";
-
+	"use Transitional;"
     $.ajax({
         url: 'login.php',
         dataType: 'json',
@@ -17,6 +17,7 @@ function appPropagation() {
 
 function login() {
     //"use strict";
+	"use Transitional;"
     document.cookie = 'fb_token=' + FB.getAuthResponse().accessToken;
     appPropagation();
    
@@ -24,6 +25,7 @@ function login() {
 
 function logout() {
     //"use strict";
+	"use Transitional;"
     document.cookie = 'fb_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     appPropagation()
     
@@ -32,6 +34,8 @@ function logout() {
 
 function loginStatusChangeCallback(response) {
    // "use strict";
+	"use Transitional;"
+
 
     if (response.status === 'connected') {
         login();
@@ -42,6 +46,7 @@ function loginStatusChangeCallback(response) {
 
 function checkLoginState() {
    // "use strict";
+	"use Transitional;"
 
     FB.getLoginStatus(function (response) {
         loginStatusChangeCallback(response);
@@ -50,6 +55,7 @@ function checkLoginState() {
 
 window.fbAsyncInit = function () {
    // "use strict";
+	"use Transitional;"
 
     FB.init({
         appId      : '1604288763142467',
@@ -65,6 +71,7 @@ window.fbAsyncInit = function () {
 
 (function (d, s, id) {
    // "use strict";
+	"use Transitional;"
 
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {
