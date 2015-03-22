@@ -1,33 +1,88 @@
-
-<html>
+<!DOCTYPE html>
 <head>
-<title>Projektx - Valime Parimat</title>
-<meta charset="UTF-8">
-<meta name="description" content="Free Web tutorials">
-<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-<meta name="author" content="Hege Refsnes">
-<link rel="stylesheet" type="text/css" href="styles.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js.js" type="text/javascript"></script>
- <script src="scripts.js"></script>
-
+   <Title>Projektx - Valime Parimat</Title>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="scripts.js"></script>
+   <script src="js.js" type="text/javascript"></script>
 </head>
 
-<fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();window.location.reload();"></fb:login-button>
+<body>
 
-<?php
-//pärast <fb:login> nuppu 
-include_once 'newfile.php'; //login.php tulevikus
+   <div id='mainWrapper'>
 
-echo '<br><br>'.'tere jälle, ' . $_SESSION['user_firstname'].'<br>';
-?>
+      <div id='header'>
+			
+         <div class='logoWrapper'>
+            <!--<img id='logo' src="css/images/logoUus.png">-->
+         </div>
+			
+         <div class='leftside' id='navigationWrapper'>
+            <button class="menuButton" id="kandidaadid">Kandidaadid</button>
+            <button class="menuButton" id="tulemused">Tulemused</button>
+            <button class="menuButton" id="statistika">Statistika</button>
+         </div>
+			
+         <div class="rightside" id="logInOut"> 		
+         	
+            <fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();window.location.reload();"></fb:login-button>
+         	
+         </div>			
+		
+         <br class="cb">
+         
+      </div>
+		
 
+      <div id='content'>
+      
+         <div id='contentWrapper'>
+            <div id='mainLeftContent'>
+               <div class='subContent'>
+                  <p>Siia tuleb "HÃ¤Ã¤letama" nupp</p>
+               </div>
+               <div class='subContent'>
+                  <button class="menuButton" id="lisaKandidaadiks">Lisa kandidaadiks</button>
+               </div>
+            </div>
+			<?php
+			//pärast <fb:login> nuppu 
+			include_once 'login.php'; //pärast seda ei displeita allolevat kui välja logitud
+			//asukoht muidu suva
+			?>
+            <div id="mainRightContent">
+					 <div class='subContent'>
+              		 <div id="loadContent">
+							<p id="h3"> 
+							
+								Tere tulemast valima!							
+							</p>
+               	</div>	
+               </div>
+            </div>
+            <br class="cb">
+         </div>
+         
+      </div>
+		
+      <div id='footer'>
+      
+         <div id='footerInfoWrapper'>
+            <div id='footerInfoContainer'>
+               <p>
+                  Inff <br> Telefon: 51234567 <br> 
+                  E-mail: inff@inff.ee
+               </p>
+            </div>
+            <br class="cb">
+         </div>
+         
+      </div>
 
-<br>oii
+   </div>
 
 </body>
+
 </html>
+
