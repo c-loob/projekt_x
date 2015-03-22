@@ -5,7 +5,7 @@
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
-
+   <script src="js.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
          </div>
 			
          <div class="rightside" id="logInOut"> 				
-            <button class="menuButton" id="login">Logi sisse</button>
+            <fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();window.location.reload();"></fb:login-button>
          </div>			
 			
          <br class="cb">
@@ -44,7 +44,11 @@
                   <button class="menuButton" id="lisaKandidaadiks">Lisa kandidaadiks</button>
                </div>
             </div>
-
+<?php
+			//pärast <fb:login> nuppu 
+			include_once 'login.php'; //pärast seda ei displeita allolevat kui välja logitud
+			//asukoht muidu suva
+			?>
             <div id="mainRightContent">
 					 <div class='subContent'>
               		 <div id="loadContent">
