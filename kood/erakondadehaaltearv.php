@@ -13,8 +13,8 @@
     	  
         echo "<h2>Kandidaadid</h2>";
         echo "<table>";
-        echo "<tr><th>erakond</th>";
-        echo "<th>haali</th></tr>";
+        echo "<tr><th>Erakond</th>";
+        echo "<th>Hääli</th></tr>";
         foreach($kandidaadid as $kandidaat) {
             echo "<tr><td>".$kandidaat['erakond']."</td>";
             echo "<td>".$kandidaat['haali']."</td></tr>";

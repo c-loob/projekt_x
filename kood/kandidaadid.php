@@ -1,18 +1,29 @@
 <?php
 
 	 include 'dbcon.php';
-    
+
     // Retrieve data
     $sql_select = "SELECT * FROM kandidaadid";
     $stmt = $conn->query($sql_select);
     $kandidaadid = $stmt->fetchAll(); 
     
+    
     echo '<div id="kandidaadid">';
+    
+	 echo	'<select name="valiPiirkond" id="valiPiirkond">';
+  	 echo			'<option id="piirkond" value="piirkond">Piirkond</option>';
+  	 echo			'<option id="tartu" value="tartu">Tartu</option>';
+  	 echo			'<option id="tallinn" value="tallinn">Tallinn</option>';
+  	 echo			'<option id="narva" value="narva">Narva</option>';
+	 echo	'</select>';
+    
+    
+    echo '<div id="siiatulebkraam">';
     
     if(count($kandidaadid) > 0) {
     	  
         echo "<h2>Kandidaadid</h2>";
-        echo "<table>";
+        echo "<table id='kandidaadidTabel'>";
         echo "<tr><th>Eesnimi</th>";
         echo "<th>Perenimi</th>";
         echo "<th>Piirkond</th>";
@@ -29,5 +40,7 @@
     }
     
     echo '</div>';
+    echo '</div>';
+     
    
 ?>
