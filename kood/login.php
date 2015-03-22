@@ -20,7 +20,7 @@ if(!isset($_COOKIE['fb_token'])) {//SIIIINN ON PROBLEEEM, ei kuva enam login/log
 	
     $obj->status = false;
     $obj->message = 'Logout';
-    die(json_encode($obj));  
+    die();  
     
 }
 
@@ -29,7 +29,7 @@ if (isset($_SESSION['user_id'])){
 if($_SESSION['user_id'] !== false) {
 	echo 'tere ' . $_SESSION['user_firstname'].'<br>';
     $obj->message = 'Already logged in';
-    die(json_encode($obj));
+    die();
 }
 }
 FacebookSession::setDefaultApplication('1604288763142467', '384c4b2abee1541bf37ba338439de210');
@@ -96,9 +96,9 @@ $_SESSION['user_locale'] = $user->locale; // may be used to integrate a multi-la
 /*kui sisse logitud, siis näitab, muidu mitte. vajab refreshi--asjade näitamine ajaxiga kuidagi?
 kui kasutatakse die() funktsiooni varem, siis lõpetab kogu selle scripti täitmise
 */
-echo $user->name;//suva asi
+//echo $user->name;//suva asi
 $obj->message = 'Logged in';
-echo json_encode($obj);
+//echo json_encode($obj);
 
 
 ?>

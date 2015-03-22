@@ -11,9 +11,10 @@
 <body>
 
    <div id='mainWrapper'>
-
+	
       <div id='header'>
-			
+			<fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();window.location.reload();"></fb:login-button>
+					
          <div class='logoWrapper'>
             <!--<img id='logo' src="css/images/logoUus.png">-->
          </div>
@@ -25,7 +26,6 @@
          </div>
 			
          <div class="rightside" id="logInOut"> 				
-            <fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();window.location.reload();"></fb:login-button>
          </div>			
 			
          <br class="cb">
@@ -44,11 +44,7 @@
                   <button class="menuButton" id="lisaKandidaadiks">Lisa kandidaadiks</button>
                </div>
             </div>
-<?php
-			//pärast <fb:login> nuppu 
-			include_once 'login.php'; //pärast seda ei displeita allolevat kui välja logitud
-			//asukoht muidu suva
-			?>
+
             <div id="mainRightContent">
 					 <div class='subContent'>
               		 <div id="loadContent">
@@ -82,4 +78,8 @@
 </body>
 
 </html>
-
+<?php
+//pärast <fb:login> nuppu 
+include_once 'login.php'; //pärast seda ei displeita allolevat kui välja logitud
+//asukoht muidu suva
+?>
