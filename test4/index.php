@@ -14,18 +14,20 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js.js" type="text/javascript"></script>
  <script src="scripts.js"></script>
+
 </head>
 
-<fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+<fb:login-button autologoutlink="true" scope="public_profile,email" onlogin="checkLoginState();window.location.reload();"></fb:login-button>
 
-<?php 
+<?php
+//pärast <fb:login> nuppu 
 include_once 'newfile.php'; //login.php tulevikus
 
 echo '<br><br>'.'tere jälle, ' . $_SESSION['user_firstname'].'<br>';
 ?>
 
 
-
+<br>oii
 
 </body>
 </html>

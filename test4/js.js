@@ -10,6 +10,7 @@ function appPropagation() {
                 // data.status: bool, true => login
                 // [data.message: string]
                 // [data.more: string]
+            
         }
     });
 }
@@ -18,12 +19,15 @@ function login() {
     "use strict";
     document.cookie = 'fb_token=' + FB.getAuthResponse().accessToken;
     appPropagation();
+   
 }
 
 function logout() {
     "use strict";
     document.cookie = 'fb_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    appPropagation();
+    appPropagation()
+    
+    
 }
 
 function loginStatusChangeCallback(response) {
@@ -55,6 +59,7 @@ window.fbAsyncInit = function () {
     });
 
     checkLoginState();
+    
 
 };
 
