@@ -1,3 +1,18 @@
+function appPropagation() {
+    "use strict";
+
+    $.ajax({
+        url: 'login.php',
+        dataType: 'json',
+        success: function (data) {
+            console.log(data);
+                // do whatever you want.
+                // data.status: bool, true => login
+                // [data.message: string]
+                // [data.more: string]
+        }
+    });
+}
 
 function login() {
     "use strict";
