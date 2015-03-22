@@ -1,10 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" 
+"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<html>
 <head>
-   <Title>Projektx - Valime Parimat</Title>
-   <meta charset="UTF-8">
-   <link rel="stylesheet" type="text/css" href="styles.css">
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-   <script src="scripts.js"></script>
+   <title>Projektx - Valime Parimat</title>
+   
+   <link rel="stylesheet" type="text/css" href="styles.css"></link>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+   <script src="scripts.js" type="text/javascript"></script>
    <script src="js.js" type="text/javascript"></script>
 </head>
 
@@ -28,7 +30,7 @@
          <div class="rightside" id="logInOut"> 				
          </div>			
 			
-         <br class="cb">
+         <br class="cb"></br>
          
       </div>
 
@@ -64,11 +66,12 @@
          <div id='footerInfoWrapper'>
             <div id='footerInfoContainer'>
                <p>
-                  Inff <br> Telefon: 51234567 <br> 
+                  Inff <br></br>
+                  Telefon: 51234567 <br></br> 
                   E-mail: inff@inff.ee
                </p>
             </div>
-            <br class="cb">
+            <br class="cb"></br>
          </div>
          
       </div>
