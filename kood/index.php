@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <head>
    <Title>Projektx - Valime Parimat</Title>
    <meta charset="UTF-8">
