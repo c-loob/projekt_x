@@ -41,7 +41,7 @@ $(document).ready(function(){
 		var id = $(this).find("option:selected").attr("id");
 		
       $.ajax({
-    		url: '/registration/kandidaadidjson.php',
+    		url: 'kandidaadidjson.php',
     		type: 'get',
     		dataType:'JSON',
     		data: "id="+ id ,
@@ -126,7 +126,7 @@ $(document).ready(function(){
   var menustaff = document.querySelector('.leftside'),
     lisak = document.querySelector('.lisaKandidaadiks'),
     textWrapper = document.querySelector('#id'),
-    content = document.querySelector('#loadContent'),
+    sisu = document.querySelector('.sisu'),
     defaultTitle = "Projektx - Valime parimat!";
 
 //////
@@ -163,12 +163,11 @@ $(document).ready(function(){
     var character = e.state;
 
     if (character == null) {
-      textWrapper.innerHTML = " ";
-      content.innerHTML = " ";
+      sisu.innerHTML = "Tere tulemast valima!";
       document.title = defaultTitle;
     } else {
+    	document.title = "Projektx | " + character;
       requestContent(character + ".php");
-      document.title = "Projektx | " + character;
     }
   })
 })();
