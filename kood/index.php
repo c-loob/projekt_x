@@ -47,7 +47,7 @@
 
             <div id="mainRightContent">
 					 <div class='subContent'>
-              		 <div id="loadContent">
+              		 <div class="sisu" id="loadContent">
 							<p id="h3"> 
 								Tere tulemast valima!							
 							</p>
