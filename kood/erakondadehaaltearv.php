@@ -7,11 +7,11 @@
     $stmt = $conn->query($sql_select);
     $kandidaadid = $stmt->fetchAll(); 
     
-    echo '<div id="erakHaalteArv">';
+    echo '<div id="laadimiseks">';
     
     if(count($kandidaadid) > 0) {
     	  
-        echo "<h2>Kandidaadid</h2>";
+        echo "<h2>Hääled erakondade kaupa</h2>";
         echo "<table>";
         echo "<tr><th>Erakond</th>";
         echo "<th>Hääli</th></tr>";

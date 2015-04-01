@@ -8,12 +8,13 @@
     $kandidaadid = $stmt->fetchAll(); 
     
     
-    echo '<div id="kandidaadid">';
+    echo '<div id="laadimiseks">';
     
-	 echo	'<select name="valiPiirkond" id="valiPiirkond">';
+	 echo	'Kandidaadid piirkonna järgi: ';
+	 echo '<select name="valiPiirkond" id="valiPiirkond">';
   	 echo			'<option id="piirkond" value="piirkond">Piirkond</option>';
-  	 echo			'<option id="tartu" value="tartu">Tartu</option>';
   	 echo			'<option id="tallinn" value="tallinn">Tallinn</option>';
+  	 echo			'<option id="tartu" value="tartu">Tartu</option>';
   	 echo			'<option id="narva" value="narva">Narva</option>';
 	 echo	'</select>';
     

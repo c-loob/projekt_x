@@ -4,7 +4,7 @@
 	 
 	 include 'dbcon.php';
 	 
-    $prk = $_POST['id'];
+    $prk = $_GET['id'];
     
 	 if($prk=="piirkond") {
 		
