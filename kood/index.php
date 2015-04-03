@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+ <?php 
+ include 'login.php';
+ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" 
+"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <Title>Projektx - Valime Parimat</Title>
-   <meta charset="UTF-8">
+   <meta charset="UTF-8"> 
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
-
+   <script src="facebook.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -25,7 +30,7 @@
          </div>
 			
          <div class="rightside" id="logInOut"> 				
-            <button class="menuButton" id="login">Logi sisse</button>
+            <fb:login-button autologoutlink='true' scope='public_profile,email' onlogin='checkLoginState();window.location.reload();'></fb:login-button>
          </div>			
 			
          <br class="cb">
@@ -49,7 +54,17 @@
 					 <div class='subContent'>
               		 <div class="sisu" id="loadContent">
 							<p id="h3"> 
-								Tere tulemast valima!							
+							<?php 
+							if(isset($_COOKIE['fb_token'])){//siia läheb sisseloginutele?>
+							Tere tulemast valima, <?php echo $_SESSION['user_firstname'];?>!
+							<?php 
+ 								
+ 							}else{//siia teistele?>
+ 								Tere tulemast valima, logi sisse!
+ 								<?php 
+ 							}
+ 							?>
+															
 							</p>
                	</div>	
                </div>
