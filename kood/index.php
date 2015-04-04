@@ -32,7 +32,9 @@
          <div class='logoWrapper'>
             <!--<img id='logo' src="css/images/logoUus.png">-->
          </div>
-			
+		 <div id=send_sse>
+		 	<script type="text/javascript" src="send_sse.js"></script>
+		 </div>
          <div class='leftside' id='navigationWrapper'>
             <a href="kandidaadid.php" class="menuButton" id="kandidaadid">Kandidaadid</a>
             <a href="erakondadehaaltearv.php" class="menuButton" id="erakondadehaaltearv">Tulemused</a>
