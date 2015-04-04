@@ -23,7 +23,7 @@
 			document.getElementById("result").innerHTML = event.data;
 			};
 			} else {
-			document.getElementById("result").innerHTML = "Valimised lõppevad 28. juunil 2015 kell 20:00";
+			document.getElementById("result").innerHTML = "Oooh, no time for you...";
 			}
 
 		</script>
