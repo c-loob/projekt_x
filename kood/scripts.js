@@ -151,9 +151,9 @@ $(document).ready(function(){
     
     if (character.slice(0, 4) == "?id=") {
     	var poolitan = window.location.href.split("/");
-		var vaja = poolitan[3].split("?");
-		alert(currentPage.split("/")[3].split("?")[1]);
-		alert(vaja[1]);
+		var vaja = poolitan[4].split("?");
+		alert(currentPage.split("/")[4].split("?")[0]);
+		alert(vaja[0]);
 		if(currentPage.split("/")[3].split("?")[0] !== vaja[0]){	
 			requestContent(vaja[0] + character);
 		} 	
