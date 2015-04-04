@@ -1,51 +1,34 @@
 $(document).ready(function(){
-
-	//Adds css class menuButtonClicked to clicked button
-	$('button').click(function(){
-		$('.menuButton').removeClass('menuButtonClicked');
-    	$(this).addClass('menuButtonClicked');
-	});
-
-/*
-	//Content changes
-	$('#kandidaadid').click(function(){
-	 	$('#loadContent').load('kandidaadid.php #laadimiseks');
-    	//document.title = "Projektx - Kandidaadid";
-    	//window.history.pushState("", "Tulemused", "/registration/kandidaadid");
-		return false;
-	});
-
-	$('#tulemused').click(function(){
-    	$('#loadContent').load('erakondadehaaltearv.php #laadimiseks');
-    	//document.title = "Projektx - Tulemused";
-	 	//window.history.pushState("", "Tulemused", "/registration/tulemused");
-		return false;
-	});
-
-	$('#statistika').click(function(){
-		$('#loadContent').load('statistika.php #laadimiseks');
-   	//document.title = "Projektx - Statistika";
-   	//window.history.pushState("", "Tulemused", "/registration/statistika");
-   	return false;
-	});
 	
-	$('#lisaKandidaadiks').click(function(){
-		$('#loadContent').load('lisaKandidaadiks.php #laadimiseks');
-   	//document.title = "Projektx - Lisa kandidaadiks";
-   	//window.history.pushState("", "Tulemused", "/registration/lisakandidaadiks");
-   	return false;
-	});	
-	*/
+	if (query = window.location.search.substring()) {
+   	var query = window.location.search.substring(1);
+   	var vars = query.split("=");
+   	$('#valiPiirkond').val(vars);
+		$.ajax({
+    		url: 'kandidaadidjson.php',
+    		type: 'get',
+    		dataType:'JSON',
+    		data: "id="+ vars[1] ,
+    		success: function(json) {
+    			$("#kandidaadidTabel tr").remove();
+    			drawTable(json);
+    		}
+		});
+	}
 
 	$(document).on('change', '#valiPiirkond', function() {
 		var id = $(this).find("option:selected").attr("id");
-		
       $.ajax({
     		url: 'kandidaadidjson.php',
     		type: 'get',
     		dataType:'JSON',
     		data: "id="+ id ,
-    		success: function(json) { 
+    		success: function(json) {
+    			
+    			var data = "?id="+id,
+        		url = data;
+    			history.pushState(data, null, url);
+    			
     			$("#kandidaadidTabel tr").remove();
     			drawTable(json);
     		}
@@ -131,8 +114,7 @@ $(document).ready(function(){
 
 //////
   function requestContent(file){
-    $('#loadContent').load(file + ' #laadimiseks');
-    return false;
+    window.location.href = file;
   }
 
 	lisak.addEventListener('click', function(e){
@@ -158,18 +140,41 @@ $(document).ready(function(){
     e.stopPropagation();
   }, false);
 
-
+  var currentPage = window.location.href;
   window.addEventListener('popstate', function(e){
-    var character = e.state;
 
+    var character = e.state;
     if (character == null) {
       sisu.innerHTML = "Tere tulemast valima!";
       document.title = defaultTitle;
-    } else {
+    }
+    if (character.slice(0, 4) == "?id=") {
+    	var poolitan = window.location.href.split("/");
+		var vaja = poolitan[3].split("?");
+		if(currentPage.split("/")[3].split("?")[0] !== vaja[0]){	
+			requestContent(vaja[0] + character);
+		} 	
+    else {	
+		var id = character.slice(4);  
+		$('#valiPiirkond').val(id);
+		
+		$.ajax({
+    		url: 'kandidaadidjson.php',
+    		type: 'get',
+    		dataType:'JSON',
+    		data: "id="+ id ,
+    		success: function(json) { 
+    			$("#kandidaadidTabel tr").remove();
+    			drawTable(json);
+    		}
+		});
+		}
+    }
+    else {
     	document.title = "Projektx | " + character;
       requestContent(character + ".php");
     }
   })
 })();
-
+///////////////////////////////////////HISTORY LÕPP
 });

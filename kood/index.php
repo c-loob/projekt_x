@@ -36,7 +36,7 @@
 		 	<script type="text/javascript" src="send_sse.js"></script>
 		 </div>
          <div class='leftside' id='navigationWrapper'>
-            <a href="kandidaadid.php" class="menuButton" id="kandidaadid">Kandidaadid</a>
+            <a href="kandidaadid.php" class="menuButton" class="menuButtonClicked" id="kandidaadid">Kandidaadid</a>
             <a href="erakondadehaaltearv.php" class="menuButton" id="erakondadehaaltearv">Tulemused</a>
             <a href="statistika.php" class="menuButton" id="statistika">Statistika</a>
          </div>
