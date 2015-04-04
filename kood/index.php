@@ -10,13 +10,23 @@
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
-   <script src="facebook.js" type="text/javascript"></script>
+   <script src="js.js" type="text/javascript"></script>
 </head>
 
 <body>
 
    <div id='mainWrapper'>
+		<script>
+		if(typeof(EventSource) !== "undefined") {
+			var source = new EventSource("send_sse.php");
+			source.onmessage = function(event) {
+			document.getElementById("result").innerHTML = event.data;
+			};
+			} else {
+			document.getElementById("result").innerHTML = "Valimised lõppevad 28. juunil 2015 kell 20:00";
+			}
 
+		</script>
       <div id='header'>
 			
          <div class='logoWrapper'>
