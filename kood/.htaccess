@@ -1,2 +1,17 @@
 AddType text/cache-manifest manifest
-Header set Cache-Control "max-age=7200, must-revalidate"
+# Expires
+ExpiresActive On
+ExpiresDefault "access plus 1 day"
+Header unset Last-Modified
+Header set Cache-Control "public"
+
+<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi|html?)$">
+Header set Cache-Control "private, must-revalidate, proxy-revalidate"
+ExpiresDefault A0
+ExpiresActive Off
+</FilesMatch>
+
+# Enable Compresion
+<FilesMatch ".(js|css|html|htm|php|xml)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
