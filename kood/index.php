@@ -14,9 +14,8 @@
  		include 'login.php';
 	 ?>
    <div id='mainWrapper'>
-		<script src="send_sse.js" type="text/javascript" ></script>
       <div id='header'>
-			
+					<script src="send_sse.js" type="text/javascript" ></script>
          <div class='logoWrapper'>
             <!--<img id='logo' src="css/images/logoUus.png">-->
          </div>
