@@ -1,7 +1,5 @@
 AddType text/cache-manifest manifest
-<ifmodule mod_expires.c>
-<Filesmatch "\.(jpg|jpeg|png|gif|js|css|swf|ico|woff|mp3)$">
-    ExpiresActive on
-    ExpiresDefault "access plus 2 days"
-</Filesmatch>
-</ifmodule>
+<FilesMatch "(?i)^.*\.(ico|flv|jpg|jpeg|png|gif|js|css)$">
+ExpiresActive On
+ExpiresDefault A2592000
+</FilesMatch>
