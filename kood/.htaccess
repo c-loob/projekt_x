@@ -1,5 +1,6 @@
 AddType text/cache-manifest manifest
 <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=50000, public"
     <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
         Header set Cache-Control "max-age=50000, public"
     </FilesMatch>
