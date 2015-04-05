@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html xmlns="http://www.w3.org/1999/xhtml" manifest="site.manifest">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
    <Title>Projektx - Valime Parimat</Title>
    <meta charset="UTF-8">
