@@ -10,7 +10,7 @@
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
-   <script src="facebook.js" type="text/javascript"></script>
+   <script src="js.js" type="text/javascript"></script>
 </head>
 
 <body>
