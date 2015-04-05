@@ -19,7 +19,7 @@
          <div class='logoWrapper'>
             <!--<img id='logo' src="css/images/logoUus.png">-->
          </div>
-		 <div id=send_sse>
+		 <div id="send_sse">
 		 	<script type="text/javascript" src="send_sse.js"></script>
 		 </div>
          <div class='leftside' id='navigationWrapper'>
