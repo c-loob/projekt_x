@@ -6,9 +6,10 @@ AddType text/cache-manifest manifest
   ExpiresDefault "access plus 1 month"
 
 # CSS and JavaScript
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType application/x-javascript "access plus 2 day"
+  ExpiresByType text/javascript "access plus 2 day"
   <IfModule mod_headers.c>
     Header append Cache-Control "public"
   </IfModule>
