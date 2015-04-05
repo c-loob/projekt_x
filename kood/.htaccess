@@ -1,14 +1,19 @@
 AddType text/cache-manifest manifest
 ## EXPIRES CACHING ##
-ExpiresActive On
-ExpiresByType image/jpg "access plus 216000 seconds"
-ExpiresByType image/jpeg "access plus 216000 seconds"
-ExpiresByType image/gif "access plus 216000 seconds"
-ExpiresByType image/png "access plus 216000 seconds"
-ExpiresByType text/css "access plus 216000 seconds"
-ExpiresByType application/pdf "access plus 216000 seconds"
-ExpiresByType text/x-javascript "access plus 216000 seconds"
-ExpiresByType application/x-shockwave-flash "access plus 216000 seconds"
-ExpiresByType image/x-icon "access plus 216000 seconds"
-ExpiresDefault "access plus 216000 seconds"
+<IfModule mod_expires.c>
+  FileETag MTime Size
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/rss+xml application/javascript application/x-javascript
+  ExpiresActive On
+  ExpiresDefault "access plus 1 seconds"
+  ExpiresByType text/html "access plus 600 seconds"
+  ExpiresByType text/css "access plus 604800 seconds"
+  ExpiresByType text/javascript "access plus 216000 seconds"
+  ExpiresByType application/xhtml+xml "access plus 600 seconds"
+  ExpiresByType application/javascript "access plus 216000 seconds"
+  ExpiresByType application/x-javascript "access plus 216000 seconds"
+  ExpiresByType image/x-icon "access plus 2592000 seconds"
+  ExpiresByType image/jpeg "access plus 2592000 seconds"
+  ExpiresByType image/png "access plus 2592000 seconds"
+  ExpiresByType image/gif "access plus 2592000 seconds"
+</IfModule>
 ## EXPIRES CACHING ##
