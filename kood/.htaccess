@@ -1,9 +1,7 @@
 AddType text/cache-manifest manifest
-<IfModule mod_expires.c>
-
-# Enable expirations
-ExpiresActive On 
-
-ExpiresDefault "access plus 1 month"
-ExpiresByType application/javascript "access plus 1 year"
-</IfModule>
+<ifmodule mod_expires.c>
+<Filesmatch "\.(jpg|jpeg|png|gif|js|css|swf|ico|woff|mp3)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 2 days"
+</Filesmatch>
+</ifmodule>
