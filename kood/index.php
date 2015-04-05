@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" manifest="site.manifest">
 <head>
    <Title>Projektx - Valime Parimat</Title>
-   <meta charset="UTF-8"> 
-   <meta http-equiv="Cache-control" content="max-age=86400">
+   <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
