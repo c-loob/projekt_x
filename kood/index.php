@@ -29,7 +29,7 @@
          </div>
 			
          <div class="rightside" id="logInOut"> 				
-            <fb:login-button autologoutlink='true' scope='public_profile,email' onlogin='checkLoginState();window.location.reload();'></fb:login-button>
+            <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
          </div>			
 			
          <br class="cb">
