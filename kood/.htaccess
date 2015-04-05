@@ -1,10 +1,1 @@
 AddType text/cache-manifest manifest
-
-ExpiresActive On
-ExpiresByType text/css A86400
-ExpiresByType text/javascript A86400
-ExpiresByType application/x-shockwave-flash A2592000
-#
-<FilesMatch "\.(gif¦jpe?g¦png¦ico¦css¦js¦swf)$">
-Header set Cache-Control "public"
-</FilesMatch>

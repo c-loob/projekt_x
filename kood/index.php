@@ -14,17 +14,7 @@
  		include 'login.php';
 	 ?>
    <div id='mainWrapper'>
-		<script>
-		if(typeof(EventSource) !== "undefined") {
-			var source = new EventSource("send_sse.php");
-			source.onmessage = function(event) {
-			document.getElementById("result").innerHTML = event.data;
-			};
-			} else {
-			document.getElementById("result").innerHTML = "Oooh, no time for you...";
-			}
-
-		</script>
+		<script src="send_sse.js" type="text/javascript" ></script>
       <div id='header'>
 			
          <div class='logoWrapper'>
@@ -53,7 +43,7 @@
          <div id='contentWrapper'>
             <div id='mainLeftContent'>
                <div class='subContent'>
-                  <p>Siia tuleb "HÃ¤Ã¤letama" nupp</p>
+                  <p>Siia tuleb "HĆ�Ā¤Ć�Ā¤letama" nupp</p>
                </div>
                <div class="lisaKandidaadiks subContent" >
                	<a href="lisaKandidaadiks.php" class="menuButton" id="lisaKandidaadiks">Lisa kandidaadiks</a>
@@ -65,7 +55,7 @@
               		 <div class="sisu" id="loadContent">
 							<p id="h3"> 
 							<?php 
-							if(isset($_COOKIE['fb_token'])){//siia läheb sisseloginutele?>
+							if(isset($_COOKIE['fb_token'])){//siia lĆ¤heb sisseloginutele?>
 							Tere tulemast valima, <?php echo $_SESSION['user_firstname'];?>!
 							<?php 
  								
