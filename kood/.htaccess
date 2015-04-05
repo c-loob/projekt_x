@@ -1,17 +1,27 @@
 AddType text/cache-manifest manifest
-# Expires
-ExpiresActive On
-ExpiresDefault "access plus 1 day"
-Header unset Last-Modified
-Header set Cache-Control "public"
-
-<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi|html?)$">
-Header set Cache-Control "private, must-revalidate, proxy-revalidate"
-ExpiresDefault A0
-ExpiresActive Off
-</FilesMatch>
-
-# Enable Compresion
-<FilesMatch ".(js|css|html|htm|php|xml)$">
-SetOutputFilter DEFLATE
-</FilesMatch>
+<IfModule mod_headers.c>
+    <FilesMatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf)$">
+        Header set Cache-Control "max-age=50000, public"
+    </FilesMatch>
+    <FilesMatch "\\.(css)$">
+        Header set Cache-Control "max-age=50000, public"
+    </FilesMatch>
+    <FilesMatch "\\.(js)$">
+        Header set Cache-Control "max-age=50000, private"
+    </FilesMatch>
+    <filesMatch "\\.(html|htm)$">
+        Header set Cache-Control "max-age=7200, public"
+        Header set Cache-Control "max-age=1, public"
+    </filesMatch>
+    # Disable caching for scripts and other dynamic files
+    <FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
+        Header unset Cache-Control
+    </FilesMatch>
+</IfModule>
+## END Cache-Control Headers
+########
+# ETAG #
+########
+## KILL THEM ETAGS
+Header unset ETag
+FileETag none
