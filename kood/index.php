@@ -32,7 +32,7 @@
             <!--<img id='logo' src="css/images/logoUus.png">-->
          </div>
 		 <div id=send_sse>
-		 	<script async type="text/javascript" src="send_sse.js"></script>
+		 	<script type="text/javascript" src="send_sse.js"></script>
 		 </div>
          <div class='leftside' id='navigationWrapper'>
             <a href="kandidaadid.php" class="menuButton" class="menuButtonClicked" id="kandidaadid">Kandidaadid</a>
@@ -54,7 +54,7 @@
          <div id='contentWrapper'>
             <div id='mainLeftContent'>
                <div class='subContent'>
-                  <p>Siia tuleb "Hääletama" nupp</p>
+                  <p>Siia tuleb "HÃ¤Ã¤letama" nupp</p>
                </div>
                <div class="lisaKandidaadiks" class='subContent' >
                	<a href="lisaKandidaadiks.php" class="menuButton" id="lisaKandidaadiks">Lisa kandidaadiks</a>
@@ -66,7 +66,7 @@
               		 <div class="sisu" id="loadContent">
 							<p id="h3"> 
 							<?php 
-							if(isset($_COOKIE['fb_token'])){//siia l�heb sisseloginutele?>
+							if(isset($_COOKIE['fb_token'])){//siia läheb sisseloginutele?>
 							Tere tulemast valima, <?php echo $_SESSION['user_firstname'];?>!
 							<?php 
  								
