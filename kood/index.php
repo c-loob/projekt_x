@@ -1,20 +1,19 @@
- <?php 
- include 'login.php';
- ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" 
-"http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd"> 
+<!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml" manifest="site.manifest">
 <head>
    <Title>Projektx - Valime Parimat</Title>
    <meta charset="UTF-8"> 
+   <meta http-equiv="Cache-control" content="max-age=86400">
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
-   <script src="js.js" type="text/javascript"></script>
+   <script async src="js.js" type="text/javascript"></script>
 </head>
-
+	
 <body>
-
+    <?php 
+ 		include 'login.php';
+	 ?>
    <div id='mainWrapper'>
 		<script>
 		if(typeof(EventSource) !== "undefined") {
@@ -33,7 +32,7 @@
             <!--<img id='logo' src="css/images/logoUus.png">-->
          </div>
 		 <div id=send_sse>
-		 	<script type="text/javascript" src="send_sse.js"></script>
+		 	<script async type="text/javascript" src="send_sse.js"></script>
 		 </div>
          <div class='leftside' id='navigationWrapper'>
             <a href="kandidaadid.php" class="menuButton" class="menuButtonClicked" id="kandidaadid">Kandidaadid</a>
