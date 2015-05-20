@@ -106,8 +106,8 @@ $(document).ready(function(){
 ///////////////////history
 (function(){
 
-  var menustaff = document.querySelector('.leftside'),
-    lisak = document.querySelector('.lisaKandidaadiks'),
+  var menustaff = document.querySelector('#navbar'),
+    lisak = document.querySelector('#lisaKandidaadiks'),
     textWrapper = document.querySelector('#id'),
     sisu = document.querySelector('.sisu'),
     defaultTitle = "Projektx - Valime parimat!";

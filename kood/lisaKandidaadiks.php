@@ -1,4 +1,3 @@
-
 <!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -29,7 +28,8 @@
          </div>
 			
          <div class="rightside" id="logInOut"> 				
-		<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>         </div>			
+				<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>         
+			</div>			
 			
          <br class="cb">
          

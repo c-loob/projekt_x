@@ -14,8 +14,11 @@ br.cb {
 	font-size: 30px;
 }
 
+.btn {
+    white-space: normal;
+}
+
 #mainWrapper {
-	width: 1400px;
 	background-position: 50% 100%;
 	margin: 0 auto;
 	padding-top: 15px;
@@ -25,11 +28,9 @@ br.cb {
 
 /* header */
 #header {
-	width: 1350px;
 	background-position: 50% 0%;
 	background-color: #A3D1FF;
-	margin-bottom: 10px;
-	margin-left: 25px;
+	margin-bottom: 5px;
 }
 
 .leftside {
@@ -114,46 +115,33 @@ a {
 
 /* contentWrapper */
 #contentWrapper {
-	width: 1350px;
 	background-position: 50% 0%;
 	background-color: #A3D1FF;
-	padding-bottom: 10px;
-	margin-bottom: 10px;	
-	margin-left: 25px;
+	padding-top: 5px;
+	margin: 0px;	
+	
 }
 
 #mainLeftContent {
-	float: left;
-	width: 300px;
 	margin-left: 25px;
 	margin-top: 25px;
-	padding-right: 25px;
 	border-right: 1px solid white;
 }
 
 #mainRightContent {
 	margin-left: 25px;
 	margin-top: 25px;
-	width: 600px;
-	float: left;
 }
 
 .subContent {
-	width: 90%;
-	float: left;
-	padding: 15px;
 	background-color: white;
-	margin-top: 5px;
-	margin-bottom: 5px;
 }
 
 
 /* footer */
 #footer {
-	width: 1350px;
 	background-position: 50% 0%;
 	background-color: #A3D1FF;
-	margin-left: 25px;
 }
 
 #footerInfoWrapper {
@@ -171,7 +159,7 @@ a {
 	margin-right: 10px;
 	margin-top: 10px;
 }
-
+/*
 td, th {
 	background-color: #E4F1FF;
     border-bottom: 1px solid #A3D1FF;
@@ -179,6 +167,7 @@ td, th {
     padding: 5px;
 }
 
+/
 /* Kandideerimise errorid */
 
 .kandideeriInputError {
