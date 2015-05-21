@@ -5,7 +5,7 @@
    <!-- Bootstrap -->
    <link href="css/bootstrap.css" rel="stylesheet">
    <link href="styles.css" rel="stylesheet">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
    
    <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" href="styles.css">
