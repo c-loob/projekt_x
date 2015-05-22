@@ -58,48 +58,305 @@
 
             <div class="col-sm-8 blog-main">
               		 <div class="sisu jumbotron" id="loadContent">
-							<p id="h3"> 
+						<p id="h3"> 
 							</p>
 							 <?php
-/*
-	 include 'dbcon.php';
+							 
+    	  						echo "<div class='page-header'>";
+        						echo 		"<h2>Hääled üle riigi</h2>";
+      						echo "</div>";
+	 							include 'dbcon.php';
     
-    // Retrieve data
-    $sql_select = "SELECT * FROM kandidaadid";
-    $stmt = $conn->query($sql_select);
-    $kandidaadid = $stmt->fetchAll(); 
+    							// Retrieve data
+    							$sql_select = "SELECT kandidaadid.erakond, SUM(kandidaadid.haali) AS haali FROM kandidaadid INNER JOIN erakonnad ON kandidaadid.erakond=erakonnad.nimi GROUP BY kandidaadid.erakond ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
     
-    echo '<div id="kandidaadid">';
+    							echo '<div id="laadimiseks">';
     
-    if(count($kandidaadid) > 0) {
+    							if(count($kandidaadid) > 0) {
+        						echo "<h3>Erakondade kaupa</h3>";
+        						echo "<div class='table-responsive'>";
+        						echo "<table class='table table-striped'>";
+        						echo "<tr><th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						foreach($kandidaadid as $kandidaat) {
+            				echo "<tr><td>".$kandidaat['erakond']."</td>";
+            				echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
+    							
+    							
+    							// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
+    						
+    
+    							if(count($kandidaadid) > 0) {
     	  
-        echo "<h2>Kandidaadid</h2>";
-        echo "<table>";
-        echo "<tr><th>Eesnimi</th>";
-        echo "<th>Perenimi</th>";
-        echo "<th>Piirkond</th>";
-        echo "<th>Erakond</th></tr>";
-        foreach($kandidaadid as $kandidaat) {
-            echo "<tr><td>".$kandidaat['eesnimi']."</td>";
-            echo "<td>".$kandidaat['perenimi']."</td>";
-            echo "<td>".$kandidaat['piirkond']."</td>";
-            echo "<td>".$kandidaat['erakond']."</td></tr>";
-        }
-        echo "</table>";
-    } else {
-        echo "<h3>Kandidaate pole.</h3>";
-    }
+        						echo '<h3>Kandidaatide kaupa</h3>';
+        						echo '<div class="table-responsive">';
+        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo "<thead>";
+        						echo "<tr><th>Eesnimi</th>";
+        						echo "<th>Perenimi</th>";
+        						echo "<th>Piirkond</th>";
+        						echo "<th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						echo "</thead>";
+        						echo "<tbody>";
+        						foreach($kandidaadid as $kandidaat) {
+            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<td>".$kandidaat['perenimi']."</td>";
+            					echo "<td>".$kandidaat['piirkond']."</td>";
+            					echo "<td>".$kandidaat['erakond']."</td>";
+            					echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</tbody>";
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
+    							
+    							//////////////////////////////////////////////////////////
+    							
+    	  						echo "<div class='page-header'>";
+        						echo 		"<h2>Hääled parteide lõikes</h2>";
+      						echo "</div>";   							
+    							
+    							// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid WHERE erakond='Vasak' ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
+    						
     
-    echo '</div>';
-*/
+    							if(count($kandidaadid) > 0) {
+    	  
+        						echo '<h3>Erakonnas Vasak</h3>';
+        						echo '<div class="table-responsive">';
+        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo "<thead>";
+        						echo "<tr><th>Eesnimi</th>";
+        						echo "<th>Perenimi</th>";
+        						echo "<th>Piirkond</th>";
+        						echo "<th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						echo "</thead>";
+        						echo "<tbody>";
+        						foreach($kandidaadid as $kandidaat) {
+            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<td>".$kandidaat['perenimi']."</td>";
+            					echo "<td>".$kandidaat['piirkond']."</td>";
+            					echo "<td>".$kandidaat['erakond']."</td>";
+            					echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</tbody>";
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
+    							
+								// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid WHERE erakond='Keskmine' ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
+    						
+    
+    							if(count($kandidaadid) > 0) {
+    	  
+        						echo '<h3>Erakonnas Keskmine</h3>';
+        						echo '<div class="table-responsive">';
+        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo "<thead>";
+        						echo "<tr><th>Eesnimi</th>";
+        						echo "<th>Perenimi</th>";
+        						echo "<th>Piirkond</th>";
+        						echo "<th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						echo "</thead>";
+        						echo "<tbody>";
+        						foreach($kandidaadid as $kandidaat) {
+            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<td>".$kandidaat['perenimi']."</td>";
+            					echo "<td>".$kandidaat['piirkond']."</td>";
+            					echo "<td>".$kandidaat['erakond']."</td>";
+            					echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</tbody>";
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
 
-							echo '<div id="statistika">';
-							echo 'Kraam statistika.php-st';
-							echo '</div>';
+								// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid WHERE erakond='Parem' ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
+    						
+    
+    							if(count($kandidaadid) > 0) {
+    	  
+        						echo '<h3>Erakonnas Parem</h3>';
+        						echo '<div class="table-responsive">';
+        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo "<thead>";
+        						echo "<tr><th>Eesnimi</th>";
+        						echo "<th>Perenimi</th>";
+        						echo "<th>Piirkond</th>";
+        						echo "<th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						echo "</thead>";
+        						echo "<tbody>";
+        						foreach($kandidaadid as $kandidaat) {
+            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<td>".$kandidaat['perenimi']."</td>";
+            					echo "<td>".$kandidaat['piirkond']."</td>";
+            					echo "<td>".$kandidaat['erakond']."</td>";
+            					echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</tbody>";
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
 
-						?>
+								//////////////////////////////////////////
 
 
+								echo "<div class='page-header'>";
+        						echo 		"<h2>Hääled piirkondade lõikes</h2>";
+      						echo "</div>";   							
+    							
+    							// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid WHERE piirkond='Tallinn' ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
+    						
+    
+    							if(count($kandidaadid) > 0) {
+    	  
+        						echo '<h3>Tallinna piirkonnas</h3>';
+        						echo '<div class="table-responsive">';
+        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo "<thead>";
+        						echo "<tr><th>Eesnimi</th>";
+        						echo "<th>Perenimi</th>";
+        						echo "<th>Piirkond</th>";
+        						echo "<th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						echo "</thead>";
+        						echo "<tbody>";
+        						foreach($kandidaadid as $kandidaat) {
+            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<td>".$kandidaat['perenimi']."</td>";
+            					echo "<td>".$kandidaat['piirkond']."</td>";
+            					echo "<td>".$kandidaat['erakond']."</td>";
+            					echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</tbody>";
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
+    							
+    							
+    							// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid WHERE piirkond='Tartu' ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
+    						
+    
+    							if(count($kandidaadid) > 0) {
+    	  
+        						echo '<h3>Tartu piirkonnas</h3>';
+        						echo '<div class="table-responsive">';
+        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo "<thead>";
+        						echo "<tr><th>Eesnimi</th>";
+        						echo "<th>Perenimi</th>";
+        						echo "<th>Piirkond</th>";
+        						echo "<th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						echo "</thead>";
+        						echo "<tbody>";
+        						foreach($kandidaadid as $kandidaat) {
+            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<td>".$kandidaat['perenimi']."</td>";
+            					echo "<td>".$kandidaat['piirkond']."</td>";
+            					echo "<td>".$kandidaat['erakond']."</td>";
+            					echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</tbody>";
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
+
+
+    							// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid WHERE piirkond='Narva' ORDER BY haali DESC";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
+    						
+    
+    							if(count($kandidaadid) > 0) {
+    	  
+        						echo '<h3>Narva piirkonnas</h3>';
+        						echo '<div class="table-responsive">';
+        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo "<thead>";
+        						echo "<tr><th>Eesnimi</th>";
+        						echo "<th>Perenimi</th>";
+        						echo "<th>Piirkond</th>";
+        						echo "<th>Erakond</th>";
+        						echo "<th>Hääli</th></tr>";
+        						echo "</thead>";
+        						echo "<tbody>";
+        						foreach($kandidaadid as $kandidaat) {
+            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<td>".$kandidaat['perenimi']."</td>";
+            					echo "<td>".$kandidaat['piirkond']."</td>";
+            					echo "<td>".$kandidaat['erakond']."</td>";
+            					echo "<td>".$kandidaat['haali']."</td></tr>";
+        						}
+        						echo "</tbody>";
+        						echo "</table>";
+    							} else {
+        						echo "<h3>Kandidaate pole.</h3>";
+    							}
+    							echo '</div>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    							echo '</div>';
+   
+   
+   
+   
+   							
+							  ?>
                	</div>	
                
             </div>
