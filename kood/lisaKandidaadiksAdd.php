@@ -10,8 +10,8 @@
         $piirkond = $_POST['piirkond'];
         $erakond = $_POST['erakond'];
         // Info andmebaasi
-        $sql_insert = "INSERT INTO kandidaadid (eesnimi, perenimi, piirkond, erakond) 
-                   VALUES (?,?,?,?)";
+        $sql_insert = "INSERT INTO kandidaadid (eesnimi, perenimi, piirkond, erakond, haali) 
+                   VALUES (?,?,?,?,0)";
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $eesnimi);
         $stmt->bindValue(2, $perenimi);

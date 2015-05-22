@@ -1,21 +1,21 @@
 <!DOCTYPE html> 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
    <Title>Projektx - Valime Parimat</Title>
-      <!-- Bootstrap -->
+   <!-- Bootstrap -->
    <link href="css/bootstrap.css" rel="stylesheet">
    <link href="styles.css" rel="stylesheet">
-   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">   
    
-   <meta charset="UTF-8"> 
+   <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
-   <script src="js.js" type="text/javascript"></script>
+   <script async src="js.js" type="text/javascript"></script>
 </head>
-
+	
 <body>
-	 <?php 
+    <?php 
  		include 'login.php';
 	 ?>
    <div id='mainWrapper' class="container">
@@ -48,45 +48,33 @@
          <br class="cb">
       </div>
 
-		<div id='contentWrapper' class="row">
+      <div id='contentWrapper' class="row">
       		<div class="col-sm-3 col-md-2 sidebar">
 					<ul class="nav nav-sidebar">
            			 <li><a href="haaleta.php" class="btn btn-lg btn-default" id="haaleta">Hääleta</a></li>
             		 <li><a href="lisaKandidaadiks.php" class="btn btn-lg btn-default " id="lisaKandidaadiks">Lisa kandidaadiks</a></li>
           		</ul>      	       
             </div>
-
-            <div class="col-sm-8 blog-main">
+            
+				<div class="col-sm-8 blog-main">
               		 <div class="sisu jumbotron" id="loadContent">
-							<p id="h3"> 
-							</p>
-							 <?php 
-							include 'dbcon.php';
+							<?php
+							
+								include 'dbcon.php';
 
-    						// Retrieve data
-    						$sql_select = "SELECT * FROM kandidaadid";
-    						$stmt = $conn->query($sql_select);
-    						$kandidaadid = $stmt->fetchAll(); 
-    
+    							// Retrieve data
+    							$sql_select = "SELECT * FROM kandidaadid";
+    							$stmt = $conn->query($sql_select);
+    							$kandidaadid = $stmt->fetchAll(); 
     						
-    						echo '<div id="laadimiseks">';
-    
-	 						echo	'Kandidaadid piirkonna järgi: ';
-	 						echo '<select name="valiPiirkond" id="valiPiirkond">';
-  	 						echo			'<option id="piirkond" value="piirkond">Piirkond</option>';
-  							echo			'<option id="tallinn" value="tallinn">Tallinn</option>';
-  	 						echo			'<option id="tartu" value="tartu">Tartu</option>';
-  	 						echo			'<option id="narva" value="narva">Narva</option>';
-	 						echo	'</select>';
-    
-    
-    						echo '<div id="siiatulebkraam">';
+								if(isset($_COOKIE['fb_token'])){
+    							echo '<div id="laadimiseks">';
+      						echo '<h3>Hääletamiseks vajuta kandidaadile ning nuppu "Hääleta"</h3>';
+      						echo '<div id="siiatulebkraam">';
     
     							if(count($kandidaadid) > 0) {
-    	  
-        						echo '<h2>Kandidaadid</h2>';
         						echo '<div class="table-responsive">';
-        						echo '<table class="table table-striped" id="kandidaadidTabel">';
+        						echo '<table class="table table-striped" id="haaletaTabel">';
         						echo "<thead>";
         						echo "<tr><th>Eesnimi</th>";
         						echo "<th>Perenimi</th>";
@@ -95,7 +83,7 @@
         						echo "</thead>";
         						echo "<tbody>";
         						foreach($kandidaadid as $kandidaat) {
-            					echo "<tr><td>".$kandidaat['eesnimi']."</td>";
+            					echo "<tr id=".$kandidaat['id']."><td>".$kandidaat['eesnimi']."</td>";
             					echo "<td>".$kandidaat['perenimi']."</td>";
             					echo "<td>".$kandidaat['piirkond']."</td>";
             					echo "<td>".$kandidaat['erakond']."</td></tr>";
@@ -107,17 +95,53 @@
     							}
     
     							echo '</div>';
-    							echo '</div>';	
-    							echo '</div>';	
-    																		
-							 ?>
-               		
+    							echo '</div>	';
+    							
+    						
+    						echo '<h3>Valitud kandidaat</h3>';
+    						echo '<form name="annaHaal" id="annaHaal" method="post" action="annaHaal.php" enctype="multipart/form-data">
+  									<fieldset>
+  									
+   								<div class="form-group">
+      								<label for="Eesnimi">Eesnimi</label>
+      								<input type="text" name="Eesnimi" id="Eesnimi" class="form-control" placeholder="Eesnimi" readonly>
+    								</div>
+    								
+    								<div class="form-group">
+      								<label for="Perenimi">Perenimi</label>
+      								<input type="text" name="Perenimi" id="Perenimi" class="form-control" placeholder="Perenimi" readonly>
+    								</div>
+    								
+    								<div class="form-group">
+      								<label for="Piirkond">Piirkond</label>
+      								<input type="text" name="Piirkond" id="Piirkond" class="form-control" placeholder="Piirkond" readonly> 
+    								</div>
+    								
+    								<div class="form-group">
+      								<label for="Erakond">Erakond</label>
+      								<input type="text" name="Erakond" id="Erakond" class="form-control" placeholder="Erakond" readonly>
+    								</div>
+  									</fieldset>
+  									<button type="submit" class="btn btn-primary" name="annaHaal" value="annaHaal">Hääleta</button>
+									</form>';
+    						echo '</div>';
+    						}
+    						
+    						
+    						
+    						else{    //siia teistele
+    						echo  '<p id="h3"> ';
+ 							echo	'Hääle andmiseks logi sisse!';
+							echo  '</p>';
+ 							}
+						 ?>
+               	</div>	
             </div>
             <br class="cb">
-         </div>
       </div>
 
-      <div id='footer'>
+
+      <div id="footer">
       
          <div id='footerInfoWrapper'>
             <div id='footerInfoContainer'>
@@ -137,3 +161,4 @@
 </body>
 
 </html>
+

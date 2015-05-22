@@ -5,6 +5,7 @@
    <!-- Bootstrap -->
    <link href="css/bootstrap.css" rel="stylesheet">
    <link href="styles.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">   
    
    <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" href="styles.css">
@@ -59,16 +60,17 @@
               		 <div class="sisu jumbotron" id="loadContent">
 							<p id="h3"> 
 							<?php 
-							if(isset($_COOKIE['fb_token'])){//siia lĆ¤heb sisseloginutele?>
-							Tere tulemast valima, <?php echo $_SESSION['user_firstname'];?>!
-							<?php 
- 								
- 							}else{//siia teistele?>
- 								Tere tulemast valima, logi sisse!
- 								<?php 
+							if(isset($_COOKIE['fb_token'])){   //siia lĆ¤heb sisseloginutele?
+							echo 'Tere tulemast valima, '; 
+							echo $_SESSION['user_firstname'];
+							echo '!';	
  							}
- 							?>
-															
+ 							
+ 							else{    //siia teistele
+ 							echo	'Tere tulemast valima, logi sisse!';
+
+ 							}
+ 							?>							
 							</p>
                	</div>	
             </div>
@@ -91,8 +93,6 @@
       </div>
 
    </div>
-		<!-- jQuery (necessary for Bootstrap's Jav	aScript plugins) -->
-    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     	<!-- Include all compiled plugins (below), or include individual files as needed -->
     	<script src="js/bootstrap.min.js"></script>
 </body>

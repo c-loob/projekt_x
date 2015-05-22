@@ -1,5 +1,33 @@
 $(document).ready(function(){
 	
+	$('#haaletaTabel').on('click', 'tbody tr', function(event) {
+    	$(this).addClass('highlight').siblings().removeClass('highlight');
+    	populateForm($(this));
+		})
+	
+	function populateForm(kraam){
+
+    	var $row = kraam.closest("tr");
+    	var a = kraam.children('td');
+		$('#Eesnimi').attr("placeholder", a[0].innerText);
+		var elem = document.getElementById("Eesnimi");
+		elem.value = a[0].innerText;
+		
+		$('#Perenimi').attr("placeholder", a[1].innerText);
+		var elem = document.getElementById("Perenimi");
+		elem.value = a[1].innerText;
+		
+		$('#Piirkond').attr("placeholder", a[2].innerText);
+		var elem = document.getElementById("Piirkond");
+		elem.value = a[2].innerText;
+		
+		$('#Erakond').attr("placeholder", a[3].innerText);
+		var elem = document.getElementById("Erakond");
+		elem.value = a[3].innerText;
+		
+
+	}	
+	
 	if (query = window.location.search.substring()) {
    	var query = window.location.search.substring(1);
    	var vars = query.split("=");

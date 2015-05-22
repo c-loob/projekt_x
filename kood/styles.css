@@ -6,6 +6,11 @@ body {
 	background-repeat:repeat; */
 }
 
+.table-striped tbody tr.highlight td {
+    background-color: #A3D1FF;
+}
+
+
 br.cb {
 	clear: both;
 }
