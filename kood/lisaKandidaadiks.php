@@ -69,7 +69,7 @@
       						echo 		'<div class="form-group">';
       						echo   	'<label for="inputEesnimi" class="col-sm-2 control-label">Eesnimi</label>';
       						echo   	'<div class="col-sm-10">
-      										<input type="text" name="eesnimi" id="eesnimi" class="form-control" placeholder="Eesnimi">
+      										<input type="text" name="eesnimi" id="eesnimi" readonly class="form-control" placeholder="Eesnimi">11
     										 </div>
   											 </div>';
       						echo   	'<div class="form-group">
@@ -91,7 +91,7 @@
      										';
      							echo 		'</div>';
      							echo 		'<div class="form-group">';
-  								echo   	'<label for="inputPiirkond" class="col-sm-2 control-label">Piirkond</label>';
+  								echo   	'<label for="inputPiirkond" class="col-sm-2 control-label">Erakond</label>';
       						echo   	'<div class="col-sm-10">';
       						echo   	'
       													<select name="erakond" id="erakond" class="form-control">
