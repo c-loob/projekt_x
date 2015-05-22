@@ -20,7 +20,6 @@
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
-<<<<<<< HEAD
 		 <script src="send_sse.js" type="text/javascript" ></script>
 		 <div id="send_sse">
 		 	<script type="text/javascript" src="send_sse.js"></script>
@@ -46,23 +45,6 @@
           		</div><!--/.nav-collapse -->
         		</div><!--/.container-fluid -->
       	</nav>		 
-=======
-			
-         <div class='logoWrapper'>
-            <!--<img id='logo' src="css/images/logoUus.png">-->
-         </div>
-			
-         <div class='leftside' id='navigationWrapper'>
-            <a href="kandidaadid.php" class="menuButton" id="kandidaadid">Kandidaadid</a>
-            <a href="erakondadehaaltearv.php" class="menuButton" id="erakondadehaaltearv">Tulemused</a>
-            <a href="statistika.php" class="menuButton" id="statistika">Statistika</a>
-         </div>
-			
-         <div class="rightside" id="logInOut"> 				
-				<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" onlogin='checkLoginState();window.location.reload();'></div>         
-			</div>			
-			
->>>>>>> origin/master
          <br class="cb">
       </div>
 
@@ -82,14 +64,8 @@
               		 <div class="sisu jumbotron" id="loadContent">
 							<p id="h3"> 
 							</p>
-<<<<<<< HEAD
 							 <?php
 								if(isset($_COOKIE['fb_token'])){
-=======
-							<?php 
-							if(isset($_COOKIE['fb_token'])){//siia lĆ¤heb sisseloginutele
-
->>>>>>> origin/master
     							echo '<div id="laadimiseks">';
       						echo '<h2>Registreeri kandidaadiks</h2>';
       						echo '<form class="form-horizontal" name="kandideeriCheck" id="kandideeriCheck" method="post" action="lisaKandidaadiksAdd.php" enctype="multipart/form-data">';
@@ -136,7 +112,6 @@
   										</div>';
     							echo '</form>';
     						echo '</div>';
-<<<<<<< HEAD
     						}
     						else{    //siia teistele
     						echo  '<p id="h3"> ';
@@ -144,14 +119,6 @@
 							echo  '</p>';
  							}
 						 ?>
-=======
-						}else{//siia teistele?>
- 							Kui soovid end kandidaadiks lisada, siis palun logi sisse!
- 							<?php 
- 						}
- 						?>
-						
->>>>>>> origin/master
                	</div>	
                
             </div>
