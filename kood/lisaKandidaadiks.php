@@ -53,7 +53,8 @@
               		 <div class="sisu" id="loadContent">
 							<p id="h3"> 
 							</p>
-							 <?php
+							<?php 
+							if(isset($_COOKIE['fb_token'])){//siia lĆ¤heb sisseloginutele
 
     							echo '<div id="laadimiseks">';
       						echo '<h2>Registreeri kandidaadiks</h2>';
@@ -82,8 +83,12 @@
       						echo		'<input class="menuButton" type="submit" name="registreeri" value="Registreeri" />'; 
     							echo '</form>';
     						echo '</div>';
-    
-						?>
+						}else{//siia teistele?>
+ 							Kui soovid end kandidaadiks lisada, siis palun logi sisse!
+ 							<?php 
+ 						}
+ 						?>
+						
                	</div>	
                </div>
             </div>
