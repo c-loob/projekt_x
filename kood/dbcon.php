@@ -18,4 +18,8 @@
         die(var_dump($e));
     }
     
+    function closemysql() {
+    		$conn = null;
+		}
+    
 ?>

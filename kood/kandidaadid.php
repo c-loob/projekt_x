@@ -36,7 +36,7 @@
           		<div id="navbar" class="navbar-collapse collapse">
             		<ul class="nav navbar-nav">
               			<li><a href="kandidaadid.php" class="btn btn-lg btn-default" id="kandidaadid">Kandidaadid</a></li>
-              			<li><a href="tulemused.php" class="btn btn-lg btn-default" id="erakondadehaaltearv">Tulemused</a></li>
+              			<li><a href="tulemused.php" class="btn btn-lg btn-default" id="tulemused">Tulemused</a></li>
               			<li><a href="statistika.php" class="btn btn-lg btn-default" id="statistika">Statistika</a></li>
             		</ul>
             		<ul class="nav navbar-nav navbar-right">
@@ -109,7 +109,7 @@
     							echo '</div>';
     							echo '</div>';	
     							echo '</div>';	
-    																		
+    							closemysql();									
 							 ?>
                		
             </div>

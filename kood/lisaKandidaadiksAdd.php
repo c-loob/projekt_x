@@ -23,6 +23,6 @@
         die(var_dump($e));
     }
     }
-    
+    closemysql();
     header('location:index.php');
 ?>
