@@ -71,7 +71,7 @@
       						echo 		'<div class="form-group">';
       						echo   	'<label for="inputEesnimi" class="col-sm-2 control-label">Eesnimi</label>';
       						echo   	'<div class="col-sm-10">
-      										<input type="text" name="eesnimi" id="eesnimi" readonly class="form-control" placeholder="'$nimi'">
+      										<input type="text" name="eesnimi" id="eesnimi" readonly class="form-control" placeholder="Eesnimi">
       										
     										 </div>
   											 </div>';
