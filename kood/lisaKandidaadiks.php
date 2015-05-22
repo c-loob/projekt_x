@@ -77,7 +77,7 @@
   											 </div>';*/
   						echo   	'<label for="inputEesnimi" class="col-sm-2 control-label">Eesnimi</label>"\r\n"
   							<div class="col-sm-10">
-  							'$_SESSION['user_firstname']'
+  							
   							</div>';
       						echo   	'<div class="form-group">
     											<label for="inputPerenimi" class="col-sm-2 control-label">Perenimi</label>
