@@ -28,7 +28,7 @@
          </div>
 			
          <div class="rightside" id="logInOut"> 				
-				<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>         
+				<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" onlogin=window.location.reload()></div>         
 			</div>			
 			
          <br class="cb">
