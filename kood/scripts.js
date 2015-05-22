@@ -46,6 +46,7 @@ $(document).ready(function(){
 
 	$(document).on('change', '#valiPiirkond', function() {
 		var id = $(this).find("option:selected").attr("id");
+		alert("siin");
       $.ajax({
     		url: 'kandidaadidjson.php',
     		type: 'get',
@@ -53,7 +54,7 @@ $(document).ready(function(){
     		data: "id="+ id ,
     		success: function(json) {
     			
-    			var data = "?id="+id,
+    			var data = "/"+id,
         		url = data;
     			history.pushState(data, null, url);
     			
