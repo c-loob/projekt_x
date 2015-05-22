@@ -5,7 +5,7 @@
     // Salvesta info
     if(!empty($_POST)) {
     try {
-        $eesnimi = $_POST['eesnimi'];
+        $eesnimi = $_SESSION['user_firstname'];
         $perenimi = $_POST['perenimi'];
         $piirkond = $_POST['piirkond'];
         $erakond = $_POST['erakond'];
