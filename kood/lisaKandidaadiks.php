@@ -36,7 +36,7 @@
           		<div id="navbar" class="navbar-collapse collapse">
             		<ul class="nav navbar-nav">
               			<li><a href="kandidaadid.php" class="btn btn-lg btn-default" id="kandidaadid">Kandidaadid</a></li>
-              			<li><a href="erakondadehaaltearv.php" class="btn btn-lg btn-default" id="erakondadehaaltearv">Tulemused</a></li>
+              			<li><a href="tulemused.php" class="btn btn-lg btn-default" id="erakondadehaaltearv">Tulemused</a></li>
               			<li><a href="statistika.php" class="btn btn-lg btn-default" id="statistika">Statistika</a></li>
             		</ul>
             		<ul class="nav navbar-nav navbar-right">
@@ -47,12 +47,9 @@
       	</nav>		 
          <br class="cb">
       </div>
-
-
       
-      
-         <div id='contentWrapper' class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
+		<div id='contentWrapper' class="row">
+      		<div class="col-sm-3 col-md-3 sidebar">
 					<ul class="nav nav-sidebar">
            			 <li><a href="haaleta.php" class="btn btn-lg btn-default" id="haaleta">Hääleta</a></li>
             		 <li><a href="lisaKandidaadiks.php" class="btn btn-lg btn-default " id="lisaKandidaadiks">Lisa kandidaadiks</a></li>
