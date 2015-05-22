@@ -1,7 +1,7 @@
 <?php
 
 	 include 'dbcon.php';
-    
+    	include 'login.php';
     // Salvesta info
     if(!empty($_POST)) {
     try {
