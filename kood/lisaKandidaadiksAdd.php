@@ -6,7 +6,7 @@
     if(!empty($_POST)) {
     try {
         $eesnimi = $_SESSION['user_firstname'];
-        $perenimi = $_POST['perenimi'];
+        $perenimi = $_SESSION['user_lastname'];
         $piirkond = $_POST['piirkond'];
         $erakond = $_POST['erakond'];
         // Info andmebaasi
