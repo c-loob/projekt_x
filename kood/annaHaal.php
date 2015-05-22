@@ -1,15 +1,6 @@
 <?php
+    include 'dbcon.php';
 
-	 	include 'dbcon.php';
-  		  $eesnimi = $_POST['Eesnimi'];
-        $perenimi = $_POST['Perenimi'];
-        $piirkond = $_POST['Piirkond'];
-        $erakond = $_POST['Erakond'];
-        echo "whut";
-        echo $eesnimi;
-        echo $perenimi;
-        echo $piirkond;
-        echo "sfdds $erakond";
     // Salvesta info
     if(!empty($_POST)) {
     try {
