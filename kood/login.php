@@ -2,13 +2,13 @@
 function AfterLogin(){//kui toimub logimise olekumuutus
 	window.location.reload();
 	//if(!isset($_COOKIE['fb_token'])) {
-		$eesnimi = $_SESSION['user_firstname'];
+	/*	$eesnimi = $_SESSION['user_firstname'];
 		$perenimi = $_SESSION['user_lastname'];
 	//lisatakse kasutajate tabelisse kui pole juba lisatud
 		$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = '$eesnimi' AND perenimi = '$perenimi')
 			BEGIN
 				INSERT INTO Kasutajad (eesnimi, perenimi) VALUES ('$eesnimi', '$perenimi') 
-			END";
+			END";*/
 
 }
 
