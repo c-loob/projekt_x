@@ -1,13 +1,15 @@
 <?php 
 function AfterLogin(){//kui toimub logimise olekumuutus
 	window.location.reload();
-	if(isset($_COOKIE['fb_token'])){//kui logiti sisse, siis lisatakse kasutajate tabelisse kui pole juba lisatud
-		$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = $_SESSION['user_firstname'] AND perenimi = $_SESSION['user_lastname'])
+	if(!isset($_COOKIE['fb_token'])) {
+		$eesnimi = mysql_real_escape_string($_SESSION['user_firstname']);
+		$perenimi = mysql_real_escape_string($_SESSION['user_lastname']);
+	//lisatakse kasutajate tabelisse kui pole juba lisatud
+		$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = '$eesnimi' AND perenimi = '$perenimi')
 			BEGIN
-				INSERT INTO Kasutajad (eesnimi, perenimi) VALUES ($_SESSION['user_firstname'], $_SESSION['user_lastname']) END";	}
-	else{//kui välja
-		
-	}
+				INSERT INTO Kasutajad (eesnimi, perenimi) VALUES ('$eesnimi', '$perenimi') 
+			END"};
+
 }
 
 include_once 'autoload.php';
