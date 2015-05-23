@@ -2,8 +2,8 @@
 function AfterLogin(){//kui toimub logimise olekumuutus
 	window.location.reload();
 	if(!isset($_COOKIE['fb_token'])) {
-		$eesnimi = mysql_real_escape_string($_SESSION['user_firstname']);
-		$perenimi = mysql_real_escape_string($_SESSION['user_lastname']);
+		$eesnimi = $_SESSION['user_firstname'];
+		$perenimi = $_SESSION['user_lastname'];
 	//lisatakse kasutajate tabelisse kui pole juba lisatud
 		$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = '$eesnimi' AND perenimi = '$perenimi')
 			BEGIN
