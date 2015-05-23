@@ -18,8 +18,8 @@
                    VALUES (?,?)";
         $stmt = $conn->prepare($sql_insert);
         ?>3<?php
-        $stmt->bindValue(1, '$eesnimi');
-        $stmt->bindValue(2, '$perenimi');
+        $stmt->bindValue(1, $eesnimi);
+        $stmt->bindValue(2, $perenimi);
         $stmt->execute();
        ?>4<?php
     }
