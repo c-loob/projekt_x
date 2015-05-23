@@ -39,8 +39,9 @@
               			<li><a href="tulemused.php" class="btn btn-lg btn-default" id="erakondadehaaltearv">Tulemused</a></li>
               			<li><a href="statistika.php" class="btn btn-lg btn-default" id="statistika">Statistika</a></li>
             		</ul>
-            		<ul class="nav navbar-nav navbar-right">
+            		<ul class="nav navbar-nav navbar-right"><?php include 'login.php';
             			<li><div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" onlogin=AfterLogin()></div></li>
+            		?>
             		</ul>
           		</div><!--/.nav-collapse -->
         		</div><!--/.container-fluid -->
