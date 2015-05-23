@@ -17,6 +17,18 @@
 <body>
 	 <?php 
  		include 'login.php';
+ 		
+ 		function AfterLogin(){//kui toimub logimise olekumuutus
+	window.location.reload();
+	//if(!isset($_COOKIE['fb_token'])) {
+		$eesnimi = $_SESSION['user_firstname'];
+		$perenimi = $_SESSION['user_lastname'];
+	//lisatakse kasutajate tabelisse kui pole juba lisatud
+		$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = '$eesnimi' AND perenimi = '$perenimi')
+			BEGIN
+				INSERT INTO Kasutajad (eesnimi, perenimi) VALUES ('$eesnimi', '$perenimi') 
+			END";
+}
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
@@ -39,9 +51,8 @@
               			<li><a href="tulemused.php" class="btn btn-lg btn-default" id="erakondadehaaltearv">Tulemused</a></li>
               			<li><a href="statistika.php" class="btn btn-lg btn-default" id="statistika">Statistika</a></li>
             		</ul>
-            		<ul class="nav navbar-nav navbar-right"><?php include 'login.php';
+            		<ul class="nav navbar-nav navbar-right">
             			<li><div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" onlogin=AfterLogin()></div></li>
-            		?>
             		</ul>
           		</div><!--/.nav-collapse -->
         		</div><!--/.container-fluid -->
