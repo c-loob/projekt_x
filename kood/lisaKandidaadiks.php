@@ -65,29 +65,7 @@
 							<p id="h3"> 
 							</p>
 							 <?php
-							 try {
-        							$eesnimi = $_SESSION['user_firstname'];
-        							$perenimi = $_SESSION['user_lastname'];
-								if(isset($_COOKIE['fb_token'])){
-									
-									//lisatakse kasutajate tabelisse kui pole juba lisatud
-									$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = '$eesnimi' AND perenimi = '$perenimi')
-										BEGIN
-											INSERT INTO Kasutajad (eesnimi, perenimi) VALUES (?, ?) 
-										END";
-										
-										$stmt = $conn->prepare($sql_insert);
-									        $stmt->bindValue(1, $eesnimi);
-									        $stmt->bindValue(2, $perenimi);
-									      
-									        $stmt->execute();}
-									    }
-									    catch(Exception $e) {
-									        die(var_dump($e));
-									    }
-									   
-									    closemysql();
-								echo '<div id="laadimiseks">';
+						echo '<div id="laadimiseks">';
 							
 							
 						
