@@ -1,8 +1,9 @@
 000
 
 <?php
-	?>10100<?php
+	
 	include 'dbcon.php';
+	?>10100<?php
     	include 'login.php';
     // Salvesta info
     ?> 0
