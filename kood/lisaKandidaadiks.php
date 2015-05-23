@@ -80,8 +80,8 @@
     							echo $_SESSION['user_lastname'];
     										/*	<div class="col-sm-10">
       										<input type="text" class="form-control" name="perenimi" id="perenimi" placeholder="Perenimi">
-    											</div>*/
-  											 </div>';
+    											</div>
+  											 </div>';*/
   								echo 		'<div class="form-group">';
   								echo   	'<label for="inputPiirkond" class="col-sm-2 control-label">Piirkond</label>';
       						echo   	'<div class="col-sm-10">
