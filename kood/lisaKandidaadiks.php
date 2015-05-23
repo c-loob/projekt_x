@@ -63,9 +63,7 @@
 							</p>
 							 <?php
 								if(isset($_COOKIE['fb_token'])){
-									$nimi = $_SESSION['user_firstname'];
-									echo $nimi;
-    							echo '<div id="laadimiseks">';
+								echo '<div id="laadimiseks">';
       						echo '<h2>Registreeri kandidaadiks</h2>';
       						echo '<form class="form-horizontal" name="kandideeriCheck" id="kandideeriCheck" method="post" action="lisaKandidaadiksAdd.php" enctype="multipart/form-data">';
       					/*	echo 		'<div class="form-group">';
@@ -76,12 +74,13 @@
     										 </div>
   											 </div>';*/
   						echo   	'<label for="inputEesnimi" class="col-sm-2 control-label">Eesnimi</label>';
-  						echo	'<div class="col-sm-10"> Siia võiks tulla eesnimi </div>';
-      						echo   	'<div class="form-group">
-    											<label for="inputPerenimi" class="col-sm-2 control-label">Perenimi</label>
-    											<div class="col-sm-10">
+  						echo	$_SESSION['user_firstname'];
+      						/*echo   	'<div class="form-group">*/
+    						echo	'<label for="inputPerenimi" class="col-sm-2 control-label">Perenimi</label>';
+    							echo $_SESSION['user_lastname'];
+    										/*	<div class="col-sm-10">
       										<input type="text" class="form-control" name="perenimi" id="perenimi" placeholder="Perenimi">
-    											</div>
+    											</div>*/
   											 </div>';
   								echo 		'<div class="form-group">';
   								echo   	'<label for="inputPiirkond" class="col-sm-2 control-label">Piirkond</label>';
