@@ -69,24 +69,21 @@
 							        $eesnimi = $_SESSION['user_firstname'];
 							        $perenimi = $_SESSION['user_lastname'];
 							        // Info andmebaasi
-							        $sql_insert = "INSERT INTO kasutajad (eesnimi, perenimi) 
-							                   VALUES (?,?)";
-							        $stmt = $conn->prepare($sql_insert);
-							        $stmt->bindValue(1, $eesnimi);
-							        $stmt->bindValue(2, $perenimi);
-							        $stmt->execute();
+							       $sql= $mysqli->query("INSERT INTO users (eesnimi,perenimi) 
+VALUES ('{$eesnimi}', '{$perenimi}')");
 							    }
 							    catch(Exception $e) {
 							        die(var_dump($e));
 							    }
 							    }
-							    closemysql();
+							    
 						 	}
  							
  							else{    //siia teistele
  							echo	'Tere tulemast valima, logi sisse!';
 
  							}
+ 							closemysql();
  							?>							
 							</p>
                	</div>	
