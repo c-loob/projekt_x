@@ -17,7 +17,6 @@
 <body>
 	 <?php 
  		include 'login.php';
- 		include 'dbcon.php';
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
@@ -65,10 +64,8 @@
 							<p id="h3"> 
 							</p>
 							 <?php
-						echo '<div id="laadimiseks">';
-							
-							
-						
+								if(isset($_COOKIE['fb_token'])){
+								echo '<div id="laadimiseks">';
       						echo '<h2>Registreeri kandidaadiks</h2>';
       						echo '<form class="form-horizontal" name="kandideeriCheck" id="kandideeriCheck" method="post" action="lisaKandidaadiksAdd.php" enctype="multipart/form-data">';
       					/*	echo 		'<div class="form-group">';
