@@ -17,6 +17,7 @@
 <body>
 	 <?php 
  		include 'login.php';
+ 		include 'dbcon.php';
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
@@ -73,7 +74,7 @@
 							$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = '$eesnimi' AND perenimi = '$perenimi')
 								BEGIN
 									INSERT INTO Kasutajad (eesnimi, perenimi) VALUES ('$eesnimi', '$perenimi') 
-								END";
+								END";}
       						echo '<h2>Registreeri kandidaadiks</h2>';
       						echo '<form class="form-horizontal" name="kandideeriCheck" id="kandideeriCheck" method="post" action="lisaKandidaadiksAdd.php" enctype="multipart/form-data">';
       					/*	echo 		'<div class="form-group">';
