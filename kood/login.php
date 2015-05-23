@@ -1,5 +1,5 @@
 <?php 
-
+include 'dbcon.php';
 include_once 'autoload.php';
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRequest;
