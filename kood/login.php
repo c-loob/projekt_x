@@ -1,4 +1,15 @@
 <?php 
+function AfterLogin(){//kui toimub logimise olekumuutus
+	window.location.reload();
+	if(isset($_COOKIE['fb_token'])){//kui logiti sisse, siis lisatakse kasutajate tabelisse kui pole juba lisatud
+		$sql_insert = "IF NOT EXISTS (SELECT * FROM Kasutajad WHERE eesnimi = $_SESSION['user_firstname'] AND perenimi = $_SESSION['user_lastname'])
+			BEGIN
+				INSERT INTO Kasutajad (eesnimi, perenimi) VALUES ($_SESSION['user_firstname'], $_SESSION['user_lastname']) END";	}
+	else{//kui vÃ¤lja
+		
+	}
+}
+
 include_once 'autoload.php';
 	use Facebook\FacebookSession;
 	use Facebook\FacebookRequest;
@@ -13,7 +24,7 @@ $obj->status = true;
 
 // the facebook token cookie is not set
 if(!isset($_COOKIE['fb_token'])) {//SIIIINN ON PROBLEEEM, ei kuva enam login/logout nuppu
-	// logout ei tööta v dno dafuq nevermind, korras
+	// logout ei tÃ¶Ã¶ta v dno dafuq nevermind, korras
 	// unset all the session's variables
 	session_unset();
 
@@ -94,8 +105,8 @@ if(!isset($_COOKIE['fb_token'])) {//SIIIINN ON PROBLEEEM, ei kuva enam login/log
 	$_SESSION['user_lastname'] = $user->lastName;
 	$_SESSION['user_locale'] = $user->locale; // may be used to integrate a multi-language content system
 	
-	/*kui sisse logitud, siis näitab, muidu mitte. vajab refreshi--asjade näitamine ajaxiga kuidagi?
-	 kui kasutatakse die() funktsiooni varem, siis lõpetab kogu selle scripti täitmise
+	/*kui sisse logitud, siis nÃ¤itab, muidu mitte. vajab refreshi--asjade nÃ¤itamine ajaxiga kuidagi?
+	 kui kasutatakse die() funktsiooni varem, siis lÃµpetab kogu selle scripti tÃ¤itmise
 	 */
 	//echo $user->name;//suva asi
 	$obj->message = 'Logged in';
