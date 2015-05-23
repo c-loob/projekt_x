@@ -64,18 +64,6 @@
 							echo 'Tere tulemast valima, '; 
 							echo $_SESSION['user_firstname'];
 							echo '!';	
-							include 'dbcon.php';
-							try {
-							        $eesnimi = $_SESSION['user_firstname'];
-							        $perenimi = $_SESSION['user_lastname'];
-							        // Info andmebaasi
-							       $sql= $mysqli->query("INSERT INTO users (eesnimi,perenimi) 
-VALUES ('{$eesnimi}', '{$perenimi}')");
-							    }
-							    catch(Exception $e) {
-							        die(var_dump($e));
-							    }
-							    }
 							    
 						 	}
  							
