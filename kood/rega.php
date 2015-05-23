@@ -8,10 +8,10 @@
         $perenimi = $_SESSION['user_lastname'];
         // Info andmebaasi
         $sql_insert = "INSERT INTO kasutajad (eesnimi, perenimi) 
-                   VALUES ($eesnimi, $perenimi)";
+                   VALUES (?,?)";
         $stmt = $conn->prepare($sql_insert);
-       // $stmt->bindValue(1, $eesnimi);
-        //$stmt->bindValue(2, $perenimi);
+        $stmt->bindValue(1, $eesnimi);
+        $stmt->bindValue(2, $perenimi);
         $stmt->execute();
     }
     catch(Exception $e) {
