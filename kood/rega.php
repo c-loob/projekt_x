@@ -2,26 +2,27 @@
 	include 'dbcon.php';
     	include 'login.php';
     // Salvesta info
-    echo "0";
+    ?> 0
+    <?php
     try {
-    	echo "1";
+    	?>1<?php
         $eesnimi = $_SESSION['user_firstname'];
         $perenimi = $_SESSION['user_lastname'];
         // Info andmebaasi
-        echo "2";
+        ?>2<?php
         $sql_insert = "INSERT INTO kasutajad (eesnimi, perenimi) 
                    VALUES (?,?)";
         $stmt = $conn->prepare($sql_insert);
-        echo "3";
+        ?>3<?php
         $stmt->bindValue(1, '$eesnimi');
         $stmt->bindValue(2, '$perenimi');
         $stmt->execute();
-        echo "fin";
+       ?>4<?php
     }
     catch(Exception $e) {
         die(var_dump($e));
     }
-    echo "tops";
+    ?>5<?php
     closemysql();
     header('location:index.php');
 ?>
