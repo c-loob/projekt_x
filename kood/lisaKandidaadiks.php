@@ -73,11 +73,11 @@
       										
     										 </div>
   											 </div>';*/
-  						echo   	'<label for="inputEesnimi" class="col-sm-2 control-label">Eesnimi</label>';
-  						echo	$_SESSION['user_firstname'];
+  						echo   	'<label for="inputEesnimi" class="col-sm-2 control-label">Eesnimi</label>'."<br>";
+  						echo	$_SESSION['user_firstname']."<br>";
       						/*echo   	'<div class="form-group">*/
-    						echo	'<label for="inputPerenimi" class="col-sm-2 control-label">Perenimi</label>';
-    							echo $_SESSION['user_lastname'];
+    						echo	'<label for="inputPerenimi" class="col-sm-2 control-label">Perenimi</label>'."<br>";
+    							echo $_SESSION['user_lastname']."<br>";
     										/*	<div class="col-sm-10">
       										<input type="text" class="form-control" name="perenimi" id="perenimi" placeholder="Perenimi">
     											</div>
