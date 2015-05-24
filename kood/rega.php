@@ -23,5 +23,5 @@
 	    }
 	    closemysql();
     };
-    header('location:.$_SERVER['REQUEST_URI']');
+    //header('location:.$_SERVER['REQUEST_URI']');
 ?>
