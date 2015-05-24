@@ -16,9 +16,6 @@
 
 <body>
 	 <?php 
-	 if(isset($_POST)){
- 		header('location:lisaKandidaadiks.php');
-    		exit();}
  		//include 'login.php';
  		include 'rega.php';
  		
