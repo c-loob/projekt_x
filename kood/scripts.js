@@ -159,11 +159,8 @@ $(document).ready(function(){
   menustaff.addEventListener('click', function(e){
     if(e.target != e.currentTarget){
       e.preventDefault();
-      alert(e.target);
-      alert(e.currentTarget);
       var data = e.target.getAttribute('id'),
         url = data + ".php";
-        alert(url);
       history.pushState(data, null, url);
       requestContent(url);
     }
