@@ -18,7 +18,7 @@
 	 <?php 
  		//include 'login.php';
  		include 'rega.php';
- 		header('location:page_name.php');
+ 		header('location:lisakandidaadiks.php');
     		exit();
 	 ?>
    <div id='mainWrapper' class="container">
