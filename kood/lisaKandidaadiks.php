@@ -2,12 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <Title>Projektx - Valime Parimat</Title>
- <?php
- header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
-header('Cache-Control: no-store, no-cache, must-revalidate');
-header('Cache-Control: post-check=0, pre-check=0', FALSE);
-header('Pragma: no-cache');
-?>
+ <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 	      <!-- Bootstrap -->
    <link href="css/bootstrap.css" rel="stylesheet">
    <link href="styles.css" rel="stylesheet">
@@ -156,5 +151,7 @@ header('Pragma: no-cache');
     	<!-- Include all compiled plugins (below), or include individual files as needed -->
     	<script src="js/bootstrap.min.js"></script>
 </body>
-
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+</HEAD>
 </html>
