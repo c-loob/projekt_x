@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <Title>Projektx - Valime Parimat</Title>
-   <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-<META HTTP-EQUIV="Expires" CONTENT="-1">
+ 
 	      <!-- Bootstrap -->
    <link href="css/bootstrap.css" rel="stylesheet">
    <link href="styles.css" rel="stylesheet">
