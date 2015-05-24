@@ -16,8 +16,8 @@
 
 <body>
 	 <?php 
- 		include 'login.php';
- 		//include 'rega.php';
+ 		//include 'login.php';
+ 		include 'rega.php';
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
