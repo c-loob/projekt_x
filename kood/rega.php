@@ -21,7 +21,7 @@
 	    catch(Exception $e) {
 	        die(var_dump($e));
 	    }
-	    closemysql();
+	    //closemysql();
     };
     //header('location:index.php');
 ?>
