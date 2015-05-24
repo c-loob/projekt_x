@@ -2,7 +2,7 @@
 
 	 include 'dbcon.php';
     	include 'login.php';
-    	include 'rega.php';
+    	
     
     // Salvesta info
     if(!empty($_POST)) {
