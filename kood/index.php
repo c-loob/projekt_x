@@ -18,6 +18,8 @@
     <?php 
  		include 'login.php';
  		include 'rega.php';
+ 		
+ 		echo $_SESSION['user_id'];
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
