@@ -16,7 +16,7 @@
 	
 <body>
     <?php 
- 		
+ 		include 'login.php';
  		include 'rega.php';
 	 ?>
    <div id='mainWrapper' class="container">
