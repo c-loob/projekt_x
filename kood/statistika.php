@@ -66,7 +66,7 @@
     	  						echo "<div class='page-header'>";
         						echo 		"<h2>Hääled üle riigi</h2>";
       						echo "</div>";
-	 							include 'dbcon.php';
+	 						//	include 'dbcon.php';
     
     							// Retrieve data
     							$sql_select = "SELECT kandidaadid.erakond, SUM(kandidaadid.haali) AS haali FROM kandidaadid INNER JOIN erakonnad ON kandidaadid.erakond=erakonnad.nimi GROUP BY kandidaadid.erakond ORDER BY haali DESC";
