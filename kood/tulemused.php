@@ -17,7 +17,10 @@
 </head>
 
 <body>
-
+	<?php 
+		include 'login.php';
+		include 'rega.php';
+		?>
 	<div id='mainWrapper' class="container">
       <div id='header'>
 		 <script src="send_sse.js" type="text/javascript" ></script>
