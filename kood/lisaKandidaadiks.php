@@ -16,10 +16,12 @@
 
 <body>
 	 <?php 
+	 if(isset($_POST)){
+ 		header('location:lisaKandidaadiks.php');
+    		exit();}
  		//include 'login.php';
  		include 'rega.php';
- 		header('location:lisaKandidaadiks.php');
-    		exit();
+ 		
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
