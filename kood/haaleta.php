@@ -61,7 +61,7 @@
               		 <div class="sisu jumbotron" id="loadContent">
 							<?php
 							
-								include 'dbcon.php';
+								//include 'dbcon.php';
 
     							// Retrieve data
     							$sql_select = "SELECT * FROM kandidaadid";
