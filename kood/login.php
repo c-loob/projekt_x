@@ -20,14 +20,14 @@ if(!isset($_COOKIE['fb_token'])) {//SIIIINN ON PROBLEEEM, ei kuva enam login/log
 
 	$obj->status = false;
 	$obj->message = 'Logout';
-	echo 'cookie not set';
+
 	//die();
 }
 
 	// I'm already logged in
 	if (isset($_SESSION['user_id'])){
 		if($_SESSION['user_id'] !== false) {
-			echo 'tere ' . $_SESSION['user_firstname'].'<br>';
+			
 			$obj->message = 'Already logged in';
 			//die();
 		}
