@@ -11,7 +11,7 @@
    <link rel="stylesheet" type="text/css" href="styles.css">
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script src="scripts.js"></script>
-   <script src="js.js" type="text/javascript"></script>
+   <script async src="js.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
             		</ul>
             		<ul class="nav navbar-nav navbar-right">
             			<li><?php 
-            			echo '<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" onlogin="window.location.reload(True)"></div>'; 
+            			echo '<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true" onlogin="window.location.reload()"></div>'; 
             			?></li>
             		</ul>
           		</div><!--/.nav-collapse -->
