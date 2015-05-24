@@ -2,8 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
    <Title>Projektx - Valime Parimat</Title>
- <meta http-equiv="expires" content="Sun, 01 Jan 2014 00:00:00 GMT"/>
-<meta http-equiv="pragma" content="no-cache" />
+ <?php
+ header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Cache-Control: post-check=0, pre-check=0', FALSE);
+header('Pragma: no-cache');
+?>
 	      <!-- Bootstrap -->
    <link href="css/bootstrap.css" rel="stylesheet">
    <link href="styles.css" rel="stylesheet">
