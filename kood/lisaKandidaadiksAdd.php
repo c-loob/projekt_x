@@ -14,7 +14,7 @@
         $erakond = $_POST['erakond'];
         // Info andmebaasi
         
-        $sql_insert = "REPLACE INTO kandidaadid SET eesnimi=?, perenimi=?, piirkond=?, erakond=?, haali=0, uid?"; 
+        $sql_insert = "REPLACE INTO kandidaadid SET eesnimi=?, perenimi=?, piirkond=?, erakond=?, haali=0, uid=?"; 
         $stmt = $conn->prepare($sql_insert);
         $stmt->bindValue(1, $eesnimi);
         $stmt->bindValue(2, $perenimi);
