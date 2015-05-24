@@ -122,7 +122,7 @@
  							echo	'Registreerimiseks logi sisse!';
 							echo  '</p>';
  							}
- 						echo 'closemysql()';
+ 					
 						 ?>
                	</div>	
                
