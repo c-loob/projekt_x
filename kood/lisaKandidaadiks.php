@@ -18,6 +18,8 @@
 	 <?php 
  		//include 'login.php';
  		include 'rega.php';
+ 		header('location:page_name.php');
+    		exit();
 	 ?>
    <div id='mainWrapper' class="container">
       <div id='header'>
