@@ -20,9 +20,7 @@
  		include 'rega.php';
 	 ?>
    <div id='mainWrapper' class="container">
-      <div id='header'><?php
-      		header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
-		header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past?>
+      <div id='header'>
 		 <script src="send_sse.js" type="text/javascript" ></script>
 		 <div id="send_sse">
 		 	<script type="text/javascript" src="send_sse.js"></script>
