@@ -62,7 +62,7 @@
 							<p id="h3"> 
 							</p>
 							 <?php 
-							include 'dbcon.php';
+							//include 'dbcon.php';
 
     						// Retrieve data
     						$sql_select = "SELECT * FROM kandidaadid";
