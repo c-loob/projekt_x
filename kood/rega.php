@@ -11,7 +11,7 @@
 	        // Info andmebaasi
 	       // $sql_insert = "INSERT INTO kasutajad (eesnimi, perenimi) 
 	         //          VALUES (?,?)";
-	        $sql_insert = "REPLACE INTO kasutajad SET eesnimi=?, perenimi=?, id=?"; 
+	        $sql_insert = "REPLACE INTO kasutajad SET eesnimi=?, perenimi=?, uid=?"; 
 	        $stmt = $conn->prepare($sql_insert);
 	        $stmt->bindValue(1, $eesnimi);
 	        $stmt->bindValue(2, $perenimi);
