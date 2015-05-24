@@ -46,15 +46,13 @@ $(document).ready(function(){
 
 	$(document).on('change', '#valiPiirkond', function() {
 		var id = $(this).find("option:selected").attr("id");
-		alert("siin");
       $.ajax({
     		url: 'kandidaadidjson.php',
     		type: 'get',
     		dataType:'JSON',
     		data: "id="+ id ,
     		success: function(json) {
-    			
-    			var data = "/"+id,
+    			var data = "?id=" + id,
         		url = data;
     			history.pushState(data, null, url);
     			
@@ -161,8 +159,11 @@ $(document).ready(function(){
   menustaff.addEventListener('click', function(e){
     if(e.target != e.currentTarget){
       e.preventDefault();
+      alert(e.target);
+      alert(e.currentTarget);
       var data = e.target.getAttribute('id'),
         url = data + ".php";
+        alert(url);
       history.pushState(data, null, url);
       requestContent(url);
     }
@@ -174,8 +175,8 @@ $(document).ready(function(){
 
     var character = e.state;
     if (character == null) {
-      sisu.innerHTML = "Tere tulemast valima!";
       document.title = defaultTitle;
+      requestContent("index.php");
     }
     
     if (character.slice(0, 4) == "?id=") {
