@@ -15,12 +15,7 @@ Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <body>
 <h1 class="test1" id="audiotest">Test 1</h1>
 <div>
-<x:audio xmlns:x="" loop="loop" controls="controls" >
-<x:source src="mysong.ogg" type="audio/ogg" />
-<p>HTML <span class="b&i">ogg</span> audio not supported in your client
-platform. Download the song 
-<a href="mysong.ogg" title="My Song" id="audiotest">here</a>.</p>
-</x:audio>
+
 </div>
 <article>
 <h1 id="test1" class="test">Test&amp;demo</h1>
